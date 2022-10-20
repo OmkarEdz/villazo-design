@@ -42,10 +42,10 @@ const Footer = ({ footerProp }) => {
                       <p>CONNECT</p>
                       <div className="icons-wrap">
                         {footerProp.attributes.socialConnect.map((value, index) => (
-                          value.Account=='Email' ? <a href={value.URL} key={`footer-links${index}`} target={_blank}>
+                          value.Account=='Email' ? <a href={value.URL} key={`footer-links${index}`}>
                           <i className='fa-solid fa-envelope' key={`ico${index}`}></i>
                           </a> :
-                          value.URL && <a href={value.URL} key={`social${index}`} target={_blank}>
+                          value.URL && <a href={value.URL} key={`social${index}`}>
                             <i className={`fa-brands fa-${value.Account.toLowerCase()}`}></i>
                           </a>
                         ))}
