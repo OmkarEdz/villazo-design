@@ -302,7 +302,7 @@ img {
   height:26px;
   position: absolute;
   margin-left:8px;top:17px;
-  background: url('https://res.cloudinary.com/usability-designs/image/upload/v1666245615/villazzo_symbol_91f471d2_715d9fb27c.png') no-repeat;
+  background: url('https://res.cloudinary.com/usability-designs/image/upload/v1666245615/villazzo_symbol_91f471d2_715d9fb27c.png?updated_at=2022-10-20T06:00:32.182Z') no-repeat;
 }
 .navbar-light .navbar-nav .nav-link:hover, 
 .navbar-light .navbar-nav .show>.nav-link:hover{
