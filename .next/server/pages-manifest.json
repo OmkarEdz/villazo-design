@@ -1,17 +1,6 @@
 {
+  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/_app": "pages/_app.js",
-  "/category/[slug]": "pages/category/[slug].js",
-  "/article/[slug]": "pages/article/[slug].js",
-  "/reviews": "pages/reviews.js",
-  "/buy": "pages/buy.js",
-  "/sell": "pages/sell.js",
-  "/search": "pages/search.js",
-  "/sold": "pages/sold.js",
-  "/new-development": "pages/new-development.js",
-  "/": "pages/index.js",
-  "/videos": "pages/videos.js",
-  "/team-inside": "pages/team-inside.js",
-  "/team": "pages/team.js"
+  "/videos": "pages/videos.js"
 }
