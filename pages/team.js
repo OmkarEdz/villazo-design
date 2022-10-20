@@ -33,14 +33,14 @@ const Teams = ({
               {mainMembersList.map((element) => (
               <div key={mainMembersList.key} className="meet-left main-team">
                 <p className="meet-left-img">
-                  {/* <Image
+                  <Image
                     loader={myLoader}
-                    src={element.memberImageURL}
+                    src='https://res.cloudinary.com/usability-designs/image/upload/v1666244831/team_aa59daf099_7a5456758b.png?updated_at=2022-10-20T05:47:11.914Z'
                     className="header_image"
                     layout="fill"
                     alt="Villazzo"
-                  /> */}
-                  <img src={element.memberImageURL} />
+                  />
+                  {/* <img src={element.memberImageURL} /> */}
                 </p>
                 <h3 className="meet-left-name">{element.memberName}</h3>
                 <p className="broker">{element.memberType}</p>
