@@ -296,7 +296,7 @@ img {
 .navbar-light .navbar-nav .nav-link.showIcon {
   padding-right: 30px !important;
 }
-.navbar-light .navbar-nav .nav-link.showIcon:after {
+.navbar-light .navbar-nav .nav-link.showIcon::after {
   content:"";
   width:27px;
   height:26px;
@@ -831,6 +831,7 @@ h3.propertytxt {
 .number, .email{text-decoration: none;display: block;max-width: max-content;margin: auto;position: relative;}
 .number:before, .email:before{content:'';width:100%;height:1px;background-color:#909090;position: absolute;bottom: 1px;}
 .broker {margin-bottom: 0px;}
+.number:hover, .email:hover {color: #f47421;}
 .property-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;margin-top: 70px;}
 .property-box{width: 32%;text-align: center;margin-bottom: 60px;}
 .img_Wrap {margin-bottom: 30px;}
