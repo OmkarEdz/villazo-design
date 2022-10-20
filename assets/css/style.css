@@ -293,16 +293,17 @@ img {
     line-height: 23px;
 }
 .nav-item:last-child a.nav-link{text-align: right;}
-.navbar-light .navbar-nav .nav-link.showIcon {
+.navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link {
   padding-right: 30px !important;
 }
-.navbar-light .navbar-nav .nav-link.showIcon::after {
+.navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link::after {
   content:"";
   width:27px;
   height:26px;
   position: absolute;
   margin-left:8px;top:17px;
   background: url('https://res.cloudinary.com/usability-designs/image/upload/v1666245615/villazzo_symbol_91f471d2_715d9fb27c.png') no-repeat;
+  display: block !important;
 }
 .navbar-light .navbar-nav .nav-link:hover, 
 .navbar-light .navbar-nav .show>.nav-link:hover{
@@ -940,7 +941,7 @@ h3.propertytxt {
   .navbar-expand-lg .navbar-nav {width: 1024px;}
   .nav-item {width: auto;}
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;line-height: 18px;}
-  .navbar-light .navbar-nav .nav-link.showIcon:after {width: 20px;background-size: contain;height: 20px;}
+  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {width: 20px;background-size: contain;height: 20px;}
   h3.propertytxt {font-size: 40px;line-height: 30px;}
   .sell-search-box {margin-top: 70px;}
   .selltxt {font-size: 20px;}
@@ -975,7 +976,7 @@ h3.propertytxt {
   .inqury-btn a {line-height: 20px;font-size: 16px;}
   .buttons-wrap .sell-buy-rent-buttons {margin: 210px auto auto;}
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;padding: 15px 10px!important;}
-  .navbar-light .navbar-nav .nav-link.showIcon:after {top: 12px;}
+  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 12px;}
   .toll-wrap a {font-size: 14px;}
   .footer-icons {margin-top: 45px;}
   .buy-search-box {margin: 40px 0 0;}
@@ -988,7 +989,7 @@ h3.propertytxt {
 @media only screen and (max-width: 1280px) {
   .navbar-expand-lg .navbar-nav {width: 980px;}
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 16px;line-height: 16px;padding: 14px 10px!important;}
-  .navbar-light .navbar-nav .nav-link.showIcon:after {top: 10px;}
+  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 10px;}
   .nav-item {width: auto;}
   .toll-wrap a {font-size: 12px;}
   .buy-search-box label, .form-control {font-size: 14px;}
@@ -1232,7 +1233,7 @@ h3.propertytxt {
   .inquiry a.desktop-inquiry-call, .see-more-text {display: none;}
   .mobile-inquiry-call {display: block;}
   .inquiry a {color: #f8de7f;}
-  .navbar-light .navbar-nav .nav-link.showIcon:after {display: none;}
+  .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {display: none;}
   .nav-item a i {margin-left: 10px;}
   .dropdown-menu {border:unset;width: 100% !important;background: #e4ce7e;border-bottom: 1px solid #c9b363;box-shadow: unset;}
   .dropdown-menu .dropdown-item {padding: 14px 15px;font-size: 14px;text-align: left;}
@@ -1456,7 +1457,7 @@ h3.propertytxt {
   .navigate-wrap {
     width: 100%;
   }
-  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link.showIcon, .dropdown-item {
+  .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link, .dropdown-item {
     padding: 12px 20px !important;
         font-size: 14px;
     line-height: 14px;
