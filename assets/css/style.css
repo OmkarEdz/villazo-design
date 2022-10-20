@@ -1311,6 +1311,8 @@ h3.propertytxt {
   .videos_pg_wrap .buttons-wrap.video-wrapper {max-width: 380px;}
   .video-box {width:100%;margin-bottom: 40px;}
   .video_item_wrap {margin-bottom: 15px;}
+
+  .video_item_wrap:before {font-size: 40px;}
 }
 
 @media only screen and (max-width: 767px) {
