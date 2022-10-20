@@ -1,17 +1,17 @@
 {
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/category/[slug]": "pages/category/[slug].js",
+  "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
-  "/new-development": "pages/new-development.js",
-  "/": "pages/index.js",
-  "/reviews": "pages/reviews.js",
-  "/sell": "pages/sell.js",
-  "/team-inside": "pages/team-inside.js",
-  "/team": "pages/team.js",
-  "/videos": "pages/videos.js",
+  "/category/[slug]": "pages/category/[slug].js",
   "/article/[slug]": "pages/article/[slug].js",
+  "/reviews": "pages/reviews.js",
+  "/buy": "pages/buy.js",
+  "/sell": "pages/sell.js",
   "/search": "pages/search.js",
   "/sold": "pages/sold.js",
-  "/buy": "pages/buy.js"
+  "/new-development": "pages/new-development.js",
+  "/": "pages/index.js",
+  "/videos": "pages/videos.js",
+  "/team-inside": "pages/team-inside.js",
+  "/team": "pages/team.js"
 }
