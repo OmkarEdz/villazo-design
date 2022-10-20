@@ -890,6 +890,7 @@ h3.propertytxt {
 /* sold page start */
 .buttons-wrap.video-wrapper.team-wrapper, .videos_pg_wrap .buttons-wrap.video-wrapper{display: flex;margin: auto;justify-content: center;width: 70%;flex-wrap: wrap;}
 .new_dev_pg_wrap .buttons-wrap.video-wrapper.team-wrapper.dev-wrapper, .buttons-wrap.video-wrapper.team-wrapper.inside-wrap {width: 72%;}
+.main-logo {cursor: pointer;}
 /* sold page end */
 
 /*Video page css strat*/
