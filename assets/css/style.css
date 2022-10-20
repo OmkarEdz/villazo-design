@@ -220,7 +220,7 @@ img {
 .visit-text > p:first-child {
   color: #fff;
   font-size: 14px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato",ui-sans-serif;
   text-transform: uppercase;
   margin: 0px;
   font-weight: 200;
@@ -467,7 +467,7 @@ color: #fff;
 .text-navigate {
   border-bottom: 1px solid;
   padding-bottom: 15px;
-  font-family:"Lato", sans-serif;
+  font-family:"Lato",ui-sans-serif;
 }
 .navigate-links {
   width: 50%;
@@ -489,22 +489,22 @@ color: #fff;
 .navigate-sec1 a {
   color: black;
   text-decoration: none;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato",ui-sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 .navigate-sec1 a:hover {
   text-decoration: underline;
   color: #f47421;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato",ui-sans-serif;
   font-weight: 600;
 }
 .footer-sec1 {
   width: 40%;
-  font-family: 'Lato',sans-serif;
+  font-family: "Lato",ui-sans-serif;
 }
 .footer-sec1 .toll-wrap, .footer-sec1 .toll-wrap p {
-  font-family: 'Lato',sans-serif;
+  font-family: "Lato",ui-sans-serif;
   font-size: 18px;
   font-weight: 400;
 }
@@ -603,7 +603,7 @@ color: #fff;
   font-family: 'Gotham', sans-serif;
 }
 .footer-icons {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato",ui-sans-serif;
   font-size: 13px;
   font-weight: 800;
 }
@@ -637,7 +637,7 @@ buttons-wrap .sell-buy-rent-buttons {
   font-size: 22px;
   line-height: 34px;
   letter-spacing:0.5px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato",ui-sans-serif;
 }
 h3.propertytxt {
   font-size: 55px;
@@ -694,7 +694,7 @@ h3.propertytxt {
   text-align: center;
   text-decoration: none;
   font-weight: 800;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato",ui-sans-serif;
   letter-spacing: 1.5px;
       display: flex;
     align-items: center;
@@ -729,7 +729,7 @@ h3.propertytxt {
   text-transform: uppercase;
   color: #222222;
   font-weight: 700;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato",ui-sans-serif;
   margin-bottom: 10px;
 }
 .buy-search-box .form-control {
@@ -741,7 +741,7 @@ h3.propertytxt {
   text-transform: uppercase;
   color: #b5babc;
   font-weight: 700;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato",ui-sans-serif;
   padding: 13px 20px;
   height: 50px;
 }
@@ -783,7 +783,7 @@ h3.propertytxt {
   width:180px;
   text-align: center;
   display:inline-block;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato",ui-sans-serif;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.20);
@@ -808,7 +808,7 @@ h3.propertytxt {
   line-height: 25px;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato",ui-sans-serif;
 }
 
 /*TeamInside css start*/
@@ -828,7 +828,7 @@ h3.propertytxt {
 .meet-left .meet-left-img img{width: 100% !important;}
 .meet-left-name{font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;margin:0px 0px 5px;}
 .meet-left:first-child .meet-left-name {margin-bottom: 10px;}
-.broker, .number, .email{font-size: 22px;letter-spacing: 1px;line-height:32px;color: #222222;font-weight: 400;font-family: "Lato", sans-serif;text-align: center;}
+.broker, .number, .email{font-size: 22px;letter-spacing: 1px;line-height:32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;}
 .number, .email{text-decoration: none;display: block;max-width: max-content;margin: auto;position: relative;}
 .number:before, .email:before{content:'';width:100%;height:1px;background-color:#909090;position: absolute;bottom: 1px;}
 .broker {margin-bottom: 0px;}
@@ -844,7 +844,7 @@ h3.propertytxt {
 .contact-btn{width: 100%;display: flex;justify-content: center;}
 .contact-btn a{margin-bottom: 45px;border: 1px solid #f8de7f;padding: 10px;font-size: 20px;letter-spacing: 1px;line-height: 30px;text-transform: uppercase;color: #f7f5f4;font-weight: 600;font-family: "Lato",ui-sans-serif;text-align: center;width: 234px;height: 52px;}
 .find-hotel {text-align: center;}
-.find-hotel a{margin: 0 auto 80px;display: inline-block;font-size: 22px;letter-spacing: 1px;line-height: 24px;text-decoration: none;color: #222222;font-weight: 400;font-family: "Lato", sans-serif;text-align: center;border-bottom: 1px solid #222;}
+.find-hotel a{margin: 0 auto 80px;display: inline-block;font-size: 22px;letter-spacing: 1px;line-height: 24px;text-decoration: none;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;border-bottom: 1px solid #222;}
 .team-wrap{display: flex;justify-content: space-between;margin:0 auto 100px;width: 1200px;}
 .banner-img span {position: relative !important;}
 .banner-img img{width: 100% !important;}
