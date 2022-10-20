@@ -25,7 +25,7 @@ const Sold = ({
 					<span className="heading-img">
 						<Image
 							loader={myLoader}
-							src='https://res.cloudinary.com/usability-designs/image/upload/v1666154651/sold_4ed5eab465.png?updated_at=2022-10-19T04:44:09.656Z'
+							src='https://res.cloudinary.com/usability-designs/image/upload/v1666246805/sold_9a1ea02a6e.png?updated_at=2022-10-20T06:20:05.427Z'
 							className="img"
 							layout="fill"
 							alt="Villazzo"
