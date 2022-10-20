@@ -872,7 +872,7 @@ h3.propertytxt {
 .slider-wrapper .slick-dots li.slick-active {background: #f8de7f;}
 .slider-wrapper .slick-dots li.slick-active button {width: 18px;height: 18px;}
 .read-reviews{text-align: center;margin:0px auto 55px;}
-.read-reviews a{display:inline-block;width: 234px;height: 52px;padding: 10px;font-size: 20px;letter-spacing: 1px;line-height: 28px;text-transform: uppercase;background:#f8de7f;border:1px solid #f8de7f;color: #fff;font-weight: 600;font-family: "Lato",sans-serif;text-align: center;text-decoration: none;}
+.read-reviews a{display:inline-block;width: 234px;height: 52px;padding: 10px 5px;font-size: 20px;letter-spacing: 1px;line-height: 28px;text-transform: uppercase;background:#f8de7f;border:1px solid #f8de7f;color: #fff;font-weight: 600;font-family: "Lato",sans-serif;text-align: center;text-decoration: none;}
 .read-reviews a:hover{background-color: #fff;border-color: #f8de7f;color: #000;}
 /*reviews css end*/
 
