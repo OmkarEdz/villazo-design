@@ -974,7 +974,7 @@ h3.propertytxt {
   .bg-img {min-height: 700px;}
   .villazzo-logo-wrap {width: 200px;}
   .inquiry a.desktop-inquiry-call {font-size: 20px;margin-bottom: 0px;}
-  .inqury-btn a {line-height: 20px;font-size: 16px;}
+  .inqury-btn a {line-height: 20px;font-size: 16px;height: unset;}
   .buttons-wrap .sell-buy-rent-buttons {margin: 210px auto auto;}
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav .show>.nav-link {font-size: 18px;padding: 15px 10px!important;}
   .navbar-light .navbar-nav .nav-item:nth-child(2) .nav-link:after {top: 12px;}
