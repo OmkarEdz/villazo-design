@@ -12,7 +12,8 @@ var settings = {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots:true,
-    arrows: true
+    arrows: true,
+    adaptiveHeight: true
   };
 
 const Reviews = ({
