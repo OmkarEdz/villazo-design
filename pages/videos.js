@@ -25,28 +25,28 @@ const Videos = ({
             <div className="video-wrap">
               <div className="video-box">
                 <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>
                 <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
                 <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
               </div>
               <div className="video-box">
                 <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>
                 <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
                 <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
               </div>
               <div className="video-box">
                 <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>
                 <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
                 <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
               </div>
               <div className="video-box">
                 <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>
                 <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
                 <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
