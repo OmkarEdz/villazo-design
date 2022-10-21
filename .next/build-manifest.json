@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/new-development": [
+    "/videos": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/new-development.js"
-    ],
-    "/team": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/team.js"
+      "static/chunks/pages/videos.js"
     ]
   },
   "ampFirstPages": []

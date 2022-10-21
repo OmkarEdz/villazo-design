@@ -901,8 +901,8 @@ h3.propertytxt {
 .videos_pg_wrap .buttons-wrap.video-wrapper .video-heading {margin-bottom: 80px;margin-top: 55px;}
 .video-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;}
 .video-box{width: 48%;margin: 0 0 170px;}
-.video_item_wrap {height: 280px;background: #f8de7f;margin-bottom: 20px;position: relative;}
-.video-box iframe {width: 100%;height: 200px;}
+.video_item_wrap {height: 280px;margin-bottom: 20px;position: relative;}
+.video-box iframe {width: 100%;height: 100%;}
 .video-name {font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;}
 .video-content {font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;margin: 0px;}
 .video-btn a{text-decoration: none;background: #f8de7f;color: #fff;padding: 7px 60px;margin: 40px 0px 80px;display: block;font-size: 20px;}
@@ -910,7 +910,7 @@ h3.propertytxt {
 .new_dev_pg_wrap .video-btn.contact-btn a:hover, .video-btn a:hover, .inside-wrap .video-btn.contact-btn a:hover{background-color: white;color: black;border: 1px solid #f8de7f;}
 .new_dev_pg_wrap .find-hotel a {margin-bottom: 60px;}
 .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top: -10px;line-height: 35px;}
-.video_item_wrap:before {content: '\f144';font-family: 'FontAwesome';color: #fff;font-size: 60px;position: absolute;left: 0;right: 0;width: max-content;height: max-content;line-height: 1;top: 0;bottom: 0;margin: auto;}
+/* .video_item_wrap:before {content: '\f144';font-family: 'FontAwesome';color: #fff;font-size: 60px;position: absolute;left: 0;right: 0;width: max-content;height: max-content;line-height: 1;top: 0;bottom: 0;margin: auto;} */
 /*Video page css end*/
 
 
