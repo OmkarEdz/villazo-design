@@ -42,7 +42,11 @@ const Teams = ({
                   />
                   {/* <img src={element.memberImageURL} /> */}
                 </p>
-                <h3 className="meet-left-name">{element.memberName}</h3>
+                <h3 className="meet-left-name">
+                  <Link href="/team-inside">
+                    <a className="meet-left-name-link">{element.memberName}</a>
+                  </Link>
+                </h3>
                 <p className="broker">{element.memberType}</p>
                 <a className="number" href="javascript:;">{element.contactNo}</a>
                 <a className="email" href='javascript:;'>{element.memberEmail}</a>

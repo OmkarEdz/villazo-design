@@ -828,6 +828,8 @@ h3.propertytxt {
 .meet-left .meet-left-img img{width: 100% !important;}
 .meet-left-name{font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;margin:0px 0px 5px;}
 .meet-left:first-child .meet-left-name {margin-bottom: 10px;}
+.meet-left-name .meet-left-name-link {color: #222;text-decoration: none;}
+.meet-left-name .meet-left-name-link:hover {color: #f47421;}
 .broker, .number, .email{font-size: 22px;letter-spacing: 1px;line-height:32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;}
 .number, .email{text-decoration: none;display: block;max-width: max-content;margin: auto;position: relative;}
 .number:before, .email:before{content:'';width:100%;height:1px;background-color:#909090;position: absolute;bottom: 1px;}
