@@ -907,7 +907,7 @@ h3.propertytxt {
 .new_dev_pg_wrap .video-btn.contact-btn a, .inside-wrap .video-btn.contact-btn a {text-decoration: none;background: #f8de7f;padding: 10px 10px;margin: 30px 0px;display: block;border: 1px solid #f8de7f;font-size: 20px;letter-spacing: 1px;line-height: 30px;text-transform: uppercase;color: #ffffff;font-weight: 600;font-family: "Lato",ui-sans-serif;text-align: center;}
 .new_dev_pg_wrap .video-btn.contact-btn a:hover, .video-btn a:hover, .inside-wrap .video-btn.contact-btn a:hover{background-color: white;color: black;border: 1px solid #f8de7f;}
 .new_dev_pg_wrap .find-hotel a {margin-bottom: 60px;}
-.videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top: -10px;}
+.videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top: -10px;line-height: 35px;}
 .video_item_wrap:before {content: '\f144';font-family: 'FontAwesome';color: #fff;font-size: 60px;position: absolute;left: 0;right: 0;width: max-content;height: max-content;line-height: 1;top: 0;bottom: 0;margin: auto;}
 /*Video page css end*/
 
