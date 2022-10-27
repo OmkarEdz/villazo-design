@@ -9,9 +9,15 @@ import Link from 'next/link'
 
 const Sold = ({
   global,
+  soldbypage,
   footerData,
   navigation,
 }) => {
+	let soldPropList = soldbypage.attributes.soldProperties
+	let mainsoldPropList = []
+	soldPropList.forEach((element) => {
+		mainsoldPropList.push(element)
+	})
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
       }
@@ -33,84 +39,21 @@ const Sold = ({
 					</span>
 				</h1>
 				<div className="property-wrap">
+					{mainsoldPropList.map((element) => (
 					<div className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
+								src={element.propertyImageURL}
 								className="header_image"
 								layout="fill"
 								alt="Villazzo"
 							/>
 						</p>
-						<h4 className="pro-name">HEADLINE GOES HERE</h4>
-						<p className="pro-text">Subheading goes here</p>
+						<h4 className="pro-name">{element.heading}</h4>
+						<p className="pro-text">{element.subheading}</p>
 					</div>
-					<div className="property-box">
-						<p className="img_Wrap">
-							<Image
-								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-								className="header_image"
-								layout="fill"
-								alt="Villazzo"
-							/>
-						</p>
-						<h4 className="pro-name">HEADLINE GOES HERE</h4>
-						<p className="pro-text">Subheading goes here</p>
-					</div>
-					<div className="property-box">
-						<p className="img_Wrap">
-							<Image
-								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-								className="header_image"
-								layout="fill"
-								alt="Villazzo"
-							/>
-						</p>
-						<h4 className="pro-name">HEADLINE GOES HERE</h4>
-						<p className="pro-text">Subheading goes here</p>
-					</div>
-					<div className="property-box">
-						<p className="img_Wrap">
-							<Image
-								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-								className="header_image"
-								layout="fill"
-								alt="Villazzo"
-							/>
-						</p>
-						<h4 className="pro-name">HEADLINE GOES HERE</h4>
-						<p className="pro-text">Subheading goes here</p>
-					</div>
-					<div className="property-box">
-						<p className="img_Wrap">
-							<Image
-								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-								className="header_image"
-								layout="fill"
-								alt="Villazzo"
-							/>
-						</p>
-						<h4 className="pro-name">HEADLINE GOES HERE</h4>
-						<p className="pro-text">Subheading goes here</p>
-					</div>
-					<div className="property-box">
-						<p className="img_Wrap">
-							<Image
-								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-								className="header_image"
-								layout="fill"
-								alt="Villazzo"
-							/>
-						</p>
-						<h4 className="pro-name">HEADLINE GOES HERE</h4>
-						<p className="pro-text">Subheading goes here</p>
-					</div>
+					))}
 				</div>
 				<div className="video-btn sold-btn contact-btn">
 					<a href="javascript:;">MORE</a>
@@ -127,10 +70,12 @@ export async function getStaticProps() {
   // Run API calls in parallel
   const [
     globalRes,
+	soldbypageRes,
     footerRes,
     navigationRes,
   ] = await Promise.all([
     fetchAPI("/global", { populate: "*" }),
+	fetchAPI("/soldbypage", { populate: "*" }),
     fetchAPI("/footer", { populate: "deep" }),
     fetchAPI("/header-nav", { populate: "*" }),
   ])
@@ -138,6 +83,7 @@ export async function getStaticProps() {
   return {
     props: {
       global: globalRes.data,
+	  soldbypage: soldbypageRes.data,
       footerData: footerRes.data,
       navigation: navigationRes.data,
     },

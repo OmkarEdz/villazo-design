@@ -516,6 +516,7 @@ color: #fff;
 .footer-sec1 .toll-wrap p:last-child {
     margin: 0px;
 }
+.footer-sec1 .toll-wrap p:nth-last-child(2) br {display:block;}
 .footer-sec1 .toll-wrap p:last-child a {
   color: #212529;
 }
