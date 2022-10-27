@@ -30,7 +30,7 @@ const NewDevelopment = ({
 				<h1 className="sold-heading">NEW DEVLOPMENT</h1>
 				<div className="property-wrap">
 					{mainnewDevPropList.map((element) => (
-					<div className="property-box">
+					<div key={mainnewDevPropList.key} className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}

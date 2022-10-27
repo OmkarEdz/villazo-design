@@ -40,7 +40,7 @@ const Sold = ({
 				</h1>
 				<div className="property-wrap">
 					{mainsoldPropList.map((element) => (
-					<div className="property-box">
+					<div key={mainsoldPropList.key} className="property-box">
 						<p className="img_Wrap">
 							<Image
 								loader={myLoader}

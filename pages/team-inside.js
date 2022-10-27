@@ -52,7 +52,7 @@ const TeamsInside = ({
 					<h1 className="team-heading">FEATURED PROPERTIES</h1>
 					<div className="property-wrap">
 						{mainPropertyList.map((element) => (
-						<div className="property-box">
+						<div key={mainPropertyList.key} className="property-box">
 							<p className="img_Wrap">
 								<Image
 									loader={myLoader}

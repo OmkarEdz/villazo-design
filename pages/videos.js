@@ -9,9 +9,15 @@ import Link from 'next/link'
 
 const Videos = ({
   global,
+  videospage,
   footerData,
   navigation,
 }) => {
+    let videosList = videospage.attributes.video
+    let mainvideosList = []
+    videosList.forEach((element) => {
+      mainvideosList.push(element)
+    })
     const myLoader = ({ src, width, quality }) => {
         return `${src}?w=${width}&q=${quality || 75}`
       }
@@ -23,34 +29,15 @@ const Videos = ({
           <div className="buttons-wrap video-wrapper">
             <h1 className="video-heading">VIDEOS</h1>
             <div className="video-wrap">
-              <div className="video-box">
+              {mainvideosList.map((element) => (
+              <div key={mainvideosList.key} className="video-box">
                 <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
+                  <iframe src={element.youtubeEmebedURL} title="YouTube video player"></iframe>
                 </div>
-                <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
-                <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <h2 className="video-name">{element.heading}</h2>
+                <p className="video-content">{element.subheading}</p>
               </div>
-              <div className="video-box">
-                <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
-                </div>
-                <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
-                <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-              <div className="video-box">
-                <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
-                </div>
-                <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
-                <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-              <div className="video-box">
-                <div className="video_item_wrap">
-                  <iframe src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
-                </div>
-                <h2 className="video-name">NAME OF PROPERTY VIDEO</h2>
-                <p className="video-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
+              ))}
             </div>
             <div className="video-btn contact-btn sold-btn">
               <a href="javascript:;">MORE</a>
@@ -67,10 +54,12 @@ export async function getStaticProps() {
   // Run API calls in parallel
   const [
     globalRes,
+    videospageRes,
     footerRes,
     navigationRes,
   ] = await Promise.all([
     fetchAPI("/global", { populate: "*" }),
+    fetchAPI("/videospage", { populate: "*" }),
     fetchAPI("/footer", { populate: "deep" }),
     fetchAPI("/header-nav", { populate: "*" }),
   ])
@@ -78,6 +67,7 @@ export async function getStaticProps() {
   return {
     props: {
       global: globalRes.data,
+      videospage: videospageRes.data,
       footerData: footerRes.data,
       navigation: navigationRes.data,
     },
