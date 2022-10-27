@@ -9,9 +9,15 @@ import Link from 'next/link'
 
 const TeamsInside = ({
   global,
+  meettheteam,
   footerData,
   navigation,
 }) => {
+	let propertyList = meettheteam.attributes.Proprties
+	let mainPropertyList = []
+	propertyList.forEach((element) => {
+		mainPropertyList.push(element)
+	})
     const myLoader = ({ src, width, quality }) => {
       return `${src}?w=${width}&q=${quality || 75}`
     }
@@ -27,63 +33,39 @@ const TeamsInside = ({
 						<p className="meet-left-img">
 							<Image
 								loader={myLoader}
-								src='https://res.cloudinary.com/usability-designs/image/upload/v1665984008/team_aa59daf099.png'
+								src={meettheteam.attributes.memberImageURL}
 								className="header_image"
 								layout="fill"
 								alt="Villazzo"
 							/>
 						</p>
-						<h3 className="meet-left-name">LISA BLAKE</h3>
-						<p className="broker">BROKER</p>
-						<a className="number" href="javascript:;">+1 (305) 340-2727</a>
-						<a className="email" href="javascript:;">lisa.blake@villazo.com</a>
+						<h3 className="meet-left-name">{meettheteam.attributes.memberName}</h3>
+						<p className="broker">{meettheteam.attributes.memberType}</p>
+						<a className="number" href="javascript:;">{meettheteam.attributes.contactNo}</a>
+						<a className="email" href="javascript:;">{meettheteam.attributes.memberEmail}</a>
 					</div>
 					<div className="meet-right">
-						<p> I make it a priority to help all of my clients their families succeed. Real Estate is a lifestyle, and Im passionate about helping everyone successfully find secure their new home or to rent/sell their property to move on to new adventures. After all, your home is one of the most important aspects of your life. I specialize in luxury homes condominiums throughout Miami Beach, Downtown / Brickell, Coconut Grove and Coral Gables. Fluent in both English Spanish. Contact me to discuss further and move forward with your next Real Estate adventure. </p>
+						<p>{meettheteam.attributes.Content}</p>
 					</div>
 				</div>
 				<div className="properties">
 					<h1 className="team-heading">FEATURED PROPERTIES</h1>
 					<div className="property-wrap">
+						{mainPropertyList.map((element) => (
 						<div className="property-box">
 							<p className="img_Wrap">
 								<Image
 									loader={myLoader}
-									src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
+									src={element.propertyImageURL}
 									className="header_image"
 									layout="fill"
 									alt="Villazzo"
 								/>
 							</p>
-							<h4 className="pro-name">THE WALDORF ASTORIA</h4>
-							<p className="pro-text">Property Location</p>
+							<h4 className="pro-name">{element.heading}</h4>
+							<p className="pro-text">{element.subheading}</p>
 						</div>
-						<div className="property-box">
-							<p className="img_Wrap">
-								<Image
-									loader={myLoader}
-									src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-									className="header_image"
-									layout="fill"
-									alt="Villazzo"
-								/>
-							</p>
-							<h4 className="pro-name">aston martin</h4>
-							<p className="pro-text">Property Location</p>
-						</div>
-						<div className="property-box">
-							<p className="img_Wrap">
-								<Image
-									loader={myLoader}
-									src='https://res.cloudinary.com/usability-designs/image/upload/v1666097741/property_7cac483ea2.png?updated_at=2022-10-18T12:55:41.809Z'
-									className="header_image"
-									layout="fill"
-									alt="Villazzo"
-								/>
-							</p>
-							<h4 className="pro-name">Elysee</h4>
-							<p className="pro-text">Property Location</p>
-						</div>
+						))}
 					</div>
 				</div>
 				<div className="video-btn contact-btn">
@@ -104,10 +86,12 @@ export async function getStaticProps() {
   // Run API calls in parallel
   const [
     globalRes,
+	meettheteamRes,
     footerRes,
     navigationRes,
   ] = await Promise.all([
     fetchAPI("/global", { populate: "*" }),
+	fetchAPI("/meettheteam", { populate: "*" }),
     fetchAPI("/footer", { populate: "deep" }),
     fetchAPI("/header-nav", { populate: "*" }),
   ])
@@ -115,6 +99,7 @@ export async function getStaticProps() {
   return {
     props: {
       global: globalRes.data,
+	  meettheteam: meettheteamRes.data,
       footerData: footerRes.data,
       navigation: navigationRes.data,
     },
