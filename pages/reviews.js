@@ -53,9 +53,9 @@ const Reviews = ({
                   ))}
               </Slider>
           </div>
-          <div className="read-reviews">
+          {/* <div className="read-reviews">
               <a href="javascript:;">READ ALL REVIEWS</a>
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer footerProp={footerData} />

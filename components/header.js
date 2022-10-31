@@ -27,6 +27,16 @@ const Header = ({ navigation, global }) => {
   })
   const [toggleMenuClass, toggleMenu] = useState(false)
   const [subMenuClass, subMenuToggleMenu] = useState(false)
+  
+  const navRef = React.useRef(null);
+  const onAddClick = (e) => {
+    navRef.current.classList.add("show_popup");
+    alert(`click!`);
+  };
+
+  const onRemoveClick = (e) => {
+    navRef.current.classList.remove("show_popup");
+  };
   return (
     <>
       <header className="header">
@@ -60,7 +70,7 @@ const Header = ({ navigation, global }) => {
                                     {submenu.Label}
                                   </a>
                                 </li>
-                              ))}
+                              ))} 
                             </ul>
                           ) : ("")}
                         </li>
@@ -157,10 +167,39 @@ const Header = ({ navigation, global }) => {
                       )}
                     </li>
                   ))}
+                  <li className="nav-item cursor" onClick={onAddClick}><a className="nav-link ">Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </nav>
+          <div ref={navRef} id="popover" className="main_popup hide">
+            <div className="custom_model">
+              <div className="custom_model_dialog">
+                  <div className="custom_model_content">
+                    <a href="javascript:;" className="model_close"></a>
+                    <div className="Popup_wrap">
+                      <form>	
+                        <div className="contact-form">
+                          <h2>CONTACT US</h2>	
+                          <div className="contact-form-label">
+                            <input className="input-name contact-lebel" type="text" id="fname" name="fname"placeholder="FIRST NAME" />
+                            <input className="contact-lebel" type="text" id="fname" name="fname"placeholder="LAST NAME" />
+                          </div>
+                          <div className="contact-form-label contact-popup-1">
+                            <input className="input-name contact-lebel" type="text" id="fname" name="fname"placeholder="EMAIL ADDRESS" />
+                            <input className="contact-lebel" type="text" id="fname" name="fname"placeholder="PHONE NUMBER" />
+                          </div>
+                          <textarea className="form-message contact-lebel" id="w3review" name="w3review" rows="4" cols="50"placeholder="MESSAGE"></textarea>
+                        </div>
+                      </form>
+                      <div className="popup-submit-btn">
+                        <a href="javascript:;" onClick={onRemoveClick}>SUBMIT</a>
+                      </div>
+                    </div>  
+                  </div>
+              </div>
+            </div>
+          </div>
         </header>
     </>
   )

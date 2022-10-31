@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
+import Image from "next/image"
+import { getStrapiMedia } from "../lib/media"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import { fetchAPI } from "../lib/api"
-import Image from "next/image"
-import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
 
 
@@ -13,12 +13,6 @@ const Teams = ({
   footerData,
   navigation,
 }) => {
-    let membersList = teamspage.attributes.Member
-    let mainMembersList = []
-    membersList.forEach((element) => {
-      mainMembersList.push(element)
-      console.log(element)
-    })
     const myLoader = ({ src, width, quality }) => {
       return `${src}?w=${width}&q=${quality || 75}`
     }
@@ -30,26 +24,24 @@ const Teams = ({
           <div className="buttons-wrap video-wrapper team-wrapper">
             <h1 className="team-heading team">MEET THE TEAM</h1>
             <div className="meet-wrap">
-              {mainMembersList.map((element) => (
-              <div key={mainMembersList.key} className="meet-left main-team">
+              {teamspage.attributes.Member.map((element, index) => (
+              <div key={element.key} className="meet-left main-team">
                 <p className="meet-left-img">
                   <Image
                     loader={myLoader}
-                    src='https://res.cloudinary.com/usability-designs/image/upload/v1666244831/team_aa59daf099_7a5456758b.png?updated_at=2022-10-20T05:47:11.914Z'
+                    src={element.memberImageURL}
+                    key={`element${index}`}
                     className="header_image"
                     layout="fill"
                     alt="Villazzo"
                   />
-                  {/* <img src={element.memberImageURL} /> */}
                 </p>
                 <h3 className="meet-left-name">
-                  <Link href="/team-inside">
-                    <a className="meet-left-name-link">{element.memberName}</a>
-                  </Link>
+                  <a href={element.pagelink} className="meet-left-name-link">{element.memberName}</a>
                 </h3>
                 <p className="broker">{element.memberType}</p>
-                <a className="number" href="javascript:;">{element.contactNo}</a>
-                <a className="email" href='javascript:;'>{element.memberEmail}</a>
+                <a className="number" href={`tel:${encodeURIComponent(element.contactNo)}`}>{element.contactNo}</a>
+                <a className="email" href={`mailto:${encodeURIComponent(element.memberEmail)}`}>{element.memberEmail}</a>
               </div>
               ))}
             </div>
@@ -57,7 +49,7 @@ const Teams = ({
               <a href="javascript:;">CONTACT US</a>
             </div>
             <div className="find-hotel">
-              <a href="javascript:;">Find More about our Villa Hotels</a>
+              <a href="javascript:;">Find Out More About Our Villa Hotels</a>
             </div>
           </div>	
         </div>

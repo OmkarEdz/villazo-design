@@ -811,7 +811,7 @@ h3.propertytxt {
   font-weight: 700;
   font-family: "Lato",ui-sans-serif;
 }
-
+.cursor {cursor: pointer;}
 /*TeamInside css start*/
 .meet-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;margin: 15px 0px 60px;width: 100%;}
 .meet-wrap:before {content: '';width: 30%;order:0;}
@@ -901,8 +901,10 @@ h3.propertytxt {
 .videos_pg_wrap .buttons-wrap.video-wrapper{width: 72%;}
 .videos_pg_wrap .buttons-wrap.video-wrapper .video-heading {margin-bottom: 80px;margin-top: 55px;}
 .video-wrap{display: flex;justify-content: space-between;flex-wrap: wrap;}
-.video-box{width: 48%;margin: 0 0 170px;}
+.video-box{width: 48%;margin: 0 0 170px;display:none;}
+.video-box:first-child, .video-box:nth-child(2), .video-box:nth-child(3), .video-box:nth-child(4), .video-wrap.show-all .video-box {display:block;}
 .video_item_wrap {height: 280px;margin-bottom: 20px;position: relative;}
+.video_item_wrap .youtubeIcon {color: #ff0201;width: 100%;height: 280px;position: absolute;left: 0px;display: flex;top: 0;text-decoration: none;align-items: center;justify-content: center;font-size: 65px;}
 .video-box iframe {width: 100%;height: 100%;}
 .video-name {font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;}
 .video-content {font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;margin: 0px;}
@@ -913,6 +915,32 @@ h3.propertytxt {
 .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {margin-top: -10px;line-height: 35px;}
 /* .video_item_wrap:before {content: '\f144';font-family: 'FontAwesome';color: #fff;font-size: 60px;position: absolute;left: 0;right: 0;width: max-content;height: max-content;line-height: 1;top: 0;bottom: 0;margin: auto;} */
 /*Video page css end*/
+
+/* video modal css start */
+.video-modal .custom_model_dialog {display: flex;flex-direction: column;align-items: end;}
+.video-modal .custom_model_dialog a {font-size:35px;color:#fff;line-height: 1;}
+.video-modal .custom_model_dialog iframe {width: 750px;height: 500px;}
+/* video modal css end */
+
+/*Contact popup css start*/
+.custom_model {position: fixed;width: 100%;height: 100%;left: 0px;top: 0px;z-index: 999;background: rgb(0 0 0 / 60%);overflow: auto;padding: 0;align-items: center;justify-content: center;display:none;}
+.show_popup .custom_model {display: flex;}
+.custom_model_content {position: relative;background-color: #fff;padding: 35px 45px 45px;border-radius: 6px;box-shadow: 0px 0px 10px 0px #777;width: 100%;margin: auto;}
+.model_close {position: absolute;width: 40px;height: 40px;right: 0px;top: 15px;transition: .5s all;}
+.model_close img {width: 15px;}  
+.contact-form-label{display: flex;}
+.input-name{margin-right: 10px;}
+.input-name:placeholder{font-size: 18px;}
+.contact-popup-1{margin-top: 15px;}
+.contact-form h2{font-size: 55px;text-align: center;font-weight: 300;padding-bottom: 20px;}
+.form-message{margin-top: 20px;}
+.popup-submit-btn a{color: #fff;text-decoration: none;background-color: #f7dd7f;border: 1px solid #f7dd7f;padding: 7px 35px;font-size: 20px;}
+.popup-submit-btn a:hover{border-color: #ccc;color: #ccc;background-color: #fff;}
+.popup-submit-btn{margin-top: 15px;}
+.contact-lebel{background-color: #fbf9fa;width: 100%;border: 1px solid #ccc;font-size: 20px;padding: 5px 0px 8px 10px;}
+.contact-lebel::placeholder{font-size: 18px;padding: 0px 3px;color: #ccc;}
+.Popup_wrap{width: 100%;}
+/*Contact popup css end*/
 
 
 @media (min-width: 1860px){
