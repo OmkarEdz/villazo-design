@@ -45,7 +45,7 @@ const Videos = ({
               <div key={mainvideosList.key} className="video-box">
                 <div className="video_item_wrap">
                   <iframe src={element.youtubeEmebedURL} title="YouTube video player"></iframe>
-                  <a href="javascript:;" className="youtubeIcon" onClick={youtubeVideo} data-url={element.youtubeEmebedURL}><i class="fa-brands fa-youtube"></i></a>
+                  <a href="javascript:;" className="youtubeIcon" onClick={youtubeVideo} data-url={element.youtubeEmebedURL}><i className="fa-brands fa-youtube"></i></a>
                 </div>
                 <h2 className="video-name">{element.heading}</h2>
                 <p className="video-content">{element.subheading}</p>
@@ -60,7 +60,7 @@ const Videos = ({
             <div className="main_popup video-modal" ref={mdl}>
               <div className="custom_model">
                 <div className="custom_model_dialog">
-                  <a href="javascript:;" onClick={onCloseClick}><i class="fa-solid fa-xmark"></i></a>
+                  <a href="javascript:;" onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
                   <iframe ref={mdlIframe} src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>    
               </div>
