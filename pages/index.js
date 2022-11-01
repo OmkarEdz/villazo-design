@@ -8,7 +8,7 @@ import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
-import ContactForm from './contact-form'
+// import ContactForm from './contact-form'
 
 const Home = ({
   global,
