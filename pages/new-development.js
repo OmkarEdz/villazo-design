@@ -49,7 +49,7 @@ const NewDevelopment = ({
 					<a href="javascript:;">Contact Us</a>
 				</div>	
 				<div className="find-hotel">
-					<a href="javascript:;">Find More about our Villa Hotels</a>
+					<a href="javascript:;">Find Out More About Our Villa Hotels</a>
 				</div>
 			</div>
 		</div>

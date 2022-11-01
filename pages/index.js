@@ -8,6 +8,7 @@ import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
+import ContactForm from './contact-form'
 
 const Home = ({
   global,
@@ -52,6 +53,7 @@ const Home = ({
   };
   return (
     <>
+      {/* <ContactForm /> */}
       <div className="bg-img">
         <div className="homepage-image">
           <Image
