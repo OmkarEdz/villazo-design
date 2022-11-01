@@ -31,7 +31,6 @@ const Header = ({ navigation, global }) => {
   const navRef = React.useRef(null);
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
-    alert(`click!`);
   };
 
   const onRemoveClick = (e) => {
@@ -116,7 +115,7 @@ const Header = ({ navigation, global }) => {
               </div>
             </div>
             <div className="inqury-btn">
-              <a href="#">INQUIRE</a>
+              <a href="javascript:;" onClick={onAddClick}>INQUIRE</a>
             </div>
           </div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light hideOnMob">
