@@ -164,7 +164,7 @@ const Home = ({
             layout="fill"
             alt="Villazzo"
           /> */}
-          <video loop muted autoplay>
+          <video loop muted>
               <source src="https://res.cloudinary.com/usability-designs/video/upload/v1667576311/desktop_d836aea168.mp4" type="video/mp4" />
           </video>
         </div>
