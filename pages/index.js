@@ -8,7 +8,7 @@ import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
-// import ContactForm from './contact-form'
+import axios from 'axios';
 
 const Home = ({
   global,
@@ -45,24 +45,128 @@ const Home = ({
   const navRef = React.useRef(null);
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
-    alert(`click!`);
   };
 
   const onRemoveClick = (e) => {
     navRef.current.classList.remove("show_popup");
   };
+  
+  // States for contact form fields
+  const [fullname, setFullname] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onchange = event => {
+    const result = event.target.value.replace(/\D/g, '');
+    setPhone(result);
+  };
+
+  //   Form validation state
+  const [errors, setErrors] = useState({});
+
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  const re = /^[0-9\b]+$/;
+  const handleChange = (e) => {
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === '' || re.test(e.target.value)) {
+      setPhone(e.target.value)
+    }
+  }
+
+  // Validation check method
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+    if (lastName.length <= 0) {
+      tempErrors["lastName"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if (phone.length <= 0) {
+      tempErrors["phone"] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
+
+  // Handles the submit event on form submit.
+  const handleSubmit = async (event) => {
+  // Stop the form from submitting and refreshing the page.
+    event.preventDefault()
+    
+    let isValidForm = handleValidation();
+
+    if (isValidForm) {
+      axios.post('https://villazzo-adminpanel.herokuapp.com/api/contactforms',
+        {
+          "data": {
+            firstName: fullname,
+            lastName: lastName,
+            email: email,
+            phoneNo: phone,
+            message: message,
+          }
+        }
+      );
+      
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      // Reset form fields
+      setFullname("");
+      setlastName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+        setShowFailureMessage(false);
+      }, 2500);
+      return;
+    }
+      setShowSuccessMessage(false);
+      setShowFailureMessage(true);
+      // Reset form fields
+      setFullname("");
+      setlastName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+  }
   return (
     <>
-      {/* <ContactForm /> */}
       <div className="bg-img">
         <div className="homepage-image">
-          <Image
+          {/* <Image
             loader={myLoader}
             src={getStrapiMedia(homepage.attributes.headerImage)}
             className="header_image"
             layout="fill"
             alt="Villazzo"
-          />
+          /> */}
+          <video loop muted autoplay>
+              <source src="https://res.cloudinary.com/usability-designs/video/upload/v1667576311/desktop_d836aea168.mp4" type="video/mp4" />
+          </video>
         </div>
         <header className="header">
           <div className="main-wrap container">
@@ -100,6 +204,7 @@ const Home = ({
                           ) : ("")}
                         </li>
                       ))}
+                      <li className="nav-item cursor"><a className="nav-link ">Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
@@ -116,12 +221,19 @@ const Home = ({
                   />
                 </div>
                 <div className="visit-text">
-                  <p>Visit Our Sites</p>
-                  <p className="drop-down mb-drop">
-                    <a href="#">
-                      <i className="fa-solid fa-caret-down"></i>
-                    </a>
-                  </p>
+                  <div className="visit-text-wrap">
+                    <p>Visit Our Sites</p>
+                    <p className="drop-down mb-drop">
+                      <a href="#">
+                        <i className="fa-solid fa-caret-down"></i>
+                      </a>
+                    </p>
+                    <div className="dropdownMenu">
+                      <p><a href="#">Site 1</a></p>
+                      <p><a href="#">Site 2</a></p>
+                      <p><a href="#">Site 3</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -132,16 +244,22 @@ const Home = ({
                 <a href="tel:+1(305)777 0146" className="mobile-inquiry-call"><i className="fa fa-phone" aria-hidden="true"></i></a>
               </div>
               <div className="see-more-text">
-                <p>SEE MORE OPTIONS</p>
-                <p className="drop-down">
-                  <a href="#">
-                    <i className="fa-solid fa-caret-down"></i>
-                  </a>
-                </p>
+                <div className="see-more-text-wrap">
+                  <p>SEE MORE OPTIONS</p>
+                  <p className="drop-down">
+                    <a href="#">
+                      <i className="fa-solid fa-caret-down"></i>
+                    </a>
+                  </p>
+                  <div className="dropdownMenu">
+                    <p><a href="tel:+1(305)7770146">+1(305)7770146</a></p>
+                    <p><a href="tel:+33(4)94493254">+33(4)94493254</a></p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="inqury-btn">
-              <a href="#">INQUIRE</a>
+              <a href="#" >INQUIRE</a>
             </div>
           </div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light hideOnMob">
@@ -192,39 +310,11 @@ const Home = ({
                       )}
                     </li>
                   ))}
-                  <li className="nav-item cursor" onClick={onAddClick}><a className="nav-link ">Contact Us</a></li>
+                  <li className="nav-item cursor"><a className="nav-link"  onClick={onAddClick}>Contact Us</a></li>
                 </ul>
               </div>
             </div>
           </nav>
-          <div ref={navRef} id="popover" className="main_popup hide">
-                <div className="custom_model">
-                  <div className="custom_model_dialog">
-                      <div className="custom_model_content">
-                        <a href="javascript:;" className="model_close"></a>
-                        <div className="Popup_wrap">
-                          <form>	
-                            <div className="contact-form">
-                              <h2>CONTACT US</h2>	
-                              <div className="contact-form-label">
-                                <input className="input-name contact-lebel" type="text" id="fname" name="fname"placeholder="FIRST NAME" />
-                                <input className="contact-lebel" type="text" id="fname" name="fname"placeholder="LAST NAME" />
-                              </div>
-                              <div className="contact-form-label contact-popup-1">
-                                <input className="input-name contact-lebel" type="text" id="fname" name="fname"placeholder="EMAIL ADDRESS" />
-                                <input className="contact-lebel" type="text" id="fname" name="fname"placeholder="PHONE NUMBER" />
-                              </div>
-                              <textarea className="form-message contact-lebel" id="w3review" name="w3review" rows="4" cols="50"placeholder="MESSAGE"></textarea>
-                            </div>
-                          </form>
-                          <div className="popup-submit-btn">
-                            <a href="javascript:;" onClick={onRemoveClick}>SUBMIT</a>
-                          </div>
-                        </div>  
-                      </div>
-                  </div>
-                </div>
-              </div>
         </header>
         <div className="buttons-wrap">
            <div className="sell-buy-rent-buttons">
@@ -240,6 +330,116 @@ const Home = ({
             </div>
         </div>
       </div>
+      <div ref={navRef} id="popover" className="main_popup hide">
+            <div className="custom_model">
+              <div className="custom_model_dialog">
+                  <div className="custom_model_content">
+                    <a href="javascript:;" onClick={onRemoveClick} className="model_close"><i className="fa-solid fa-xmark"></i></a>
+                    <div className="Popup_wrap">
+                      <form onSubmit={handleSubmit}>
+                        <div className="contact-form">
+                          <h2>CONTACT US</h2>
+                          <div className="contact-form-label">
+                            <div className="form-item">
+                              <input
+                                placeholder="FIRST NAME" 
+                                type="text"
+                                value={fullname}
+                                onChange={(e) => {
+                                  setFullname(e.target.value);
+                                }}
+                                name="fullname"
+                                className="input-name contact-lebel"
+                              />
+                              {errors?.fullname && (
+                                <p className="error_msg">First name cannot be empty.</p>
+                              )}
+                            </div>
+                            <div className="form-item">
+                              <input
+                                placeholder="LAST NAME" 
+                                name="lastName"
+                                type="text"
+                                value={lastName}
+                                onChange={(e) => {
+                                  setlastName(e.target.value);
+                                }}
+                                className="contact-lebel"
+                              />
+                              {errors?.lastName && (
+                                <p className="error_msg">Last name cannot be empty.</p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="contact-form-label">
+                            <div className="form-item">
+                              <input
+                                placeholder="EMAIL ADDRESS" 
+                                type="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => {
+                                  setEmail(e.target.value);
+                                }}
+                                className="input-name contact-lebel"
+                              />
+                              {errors?.email && (
+                                <p className="error_msg">Email cannot be empty.</p>
+                              )}
+                            </div>
+                            <div className="form-item">
+                              <input
+                                placeholder="PHONE" 
+                                type="tel"
+                                name="phone"
+                                pattern="[0-9]*"
+                                value={phone}
+                                onChange={handleChange}
+                                className="input-name contact-lebel"
+                                max-length="12"
+                              />
+                              {errors?.email && (
+                                <p className="error_msg">Phone number cannot be empty.</p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="contact-form-label">
+                            <div className="form-item full-width">
+                              <textarea
+                                name="message"
+                                value={message}
+                                onChange={(e) => {
+                                  setMessage(e.target.value);
+                                }}
+                                className="form-message contact-lebel" rows="4" cols="50" placeholder="MESSAGE">
+                              </textarea>
+                              {errors?.message && (
+                                <p className="error_msg">Message cannot be empty.</p>
+                              )}
+                            </div>
+                          </div>
+                          <div className="submit_btn_wrap">
+                            <button type="submit" >Submit</button>
+                          </div>
+                          <div className="final_msg_wrap">
+                            {showSuccessMessage && (
+                              <p className="thankyou_msg">
+                                Thankyou! We will connect you shortly.
+                              </p>
+                            )}
+                            {showFailureMessage && (
+                              <p className="error_msg">
+                                Please fill the form
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+              </div>
+            </div>
+          </div>
       <Footer footerProp={footerData} />
     </>
   )

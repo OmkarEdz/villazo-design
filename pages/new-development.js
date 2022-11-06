@@ -46,10 +46,10 @@ const NewDevelopment = ({
 					))}
 				</div>
 				<div className="video-btn contact-btn">
-					<a href="javascript:;">Contact Us</a>
+					<a href="#">Contact Us</a>
 				</div>	
 				<div className="find-hotel">
-					<a href="javascript:;">Find Out More About Our Villa Hotels</a>
+					<a href="#">Find Out More About Our Villa Hotels</a>
 				</div>
 			</div>
 		</div>

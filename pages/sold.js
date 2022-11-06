@@ -56,7 +56,7 @@ const Sold = ({
 					))}
 				</div>
 				<div className="video-btn sold-btn contact-btn">
-					<a href="javascript:;">MORE</a>
+					<a href="#">MORE</a>
 				</div>	
 			</div>
 		</div>

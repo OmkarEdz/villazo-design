@@ -55,10 +55,10 @@ const Teams = ({
               ))}
             </div>
             <div className="inqury-btn contact-btn">
-              <a href="javascript:;" onClick={onAddClick}>CONTACT US</a>
+              <a href="#" onClick={onAddClick}>CONTACT US</a>
             </div>
             <div className="find-hotel">
-              <a href="javascript:;">Find Out More About Our Villa Hotels</a>
+              <a href="#">Find Out More About Our Villa Hotels</a>
             </div>
           </div>	
         </div>
@@ -85,7 +85,7 @@ const Teams = ({
             <div className="custom_model">
               <div className="custom_model_dialog">
                   <div className="custom_model_content">
-                    <a href="javascript:;" className="model_close"></a>
+                    <a href="#" className="model_close"></a>
                     <div className="Popup_wrap">
                       <form>	
                         <div className="contact-form">
@@ -102,7 +102,7 @@ const Teams = ({
                         </div>
                       </form>
                       <div className="popup-submit-btn">
-                        <a href="javascript:;" onClick={onRemoveClick}>SUBMIT</a>
+                        <a href="#" onClick={onRemoveClick}>SUBMIT</a>
                       </div>
                     </div>  
                   </div>

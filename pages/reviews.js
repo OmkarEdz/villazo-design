@@ -54,7 +54,7 @@ const Reviews = ({
               </Slider>
           </div>
           {/* <div className="read-reviews">
-              <a href="javascript:;">READ ALL REVIEWS</a>
+              <a href="#">READ ALL REVIEWS</a>
           </div> */}
         </div>
       </div>

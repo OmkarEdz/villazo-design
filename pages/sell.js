@@ -39,13 +39,13 @@ const Sell = ({
                 <h3 className="propertytxt">SELL YOUR PROPERTY</h3>
                 <p>Gabriel has made the experience of finding a place extremely fun in a time that should be very stressful! He works tirelessly to make sure that you find the perfect place for you at the budget you have!.</p>
               </div>
-              <div className="sell-search-box">
+              {/* <div className="sell-search-box">
                 <i className="fa fa-search" aria-hidden="true"></i>
                 <input type="text" className="search-input"/>
                 <Link href="#">
                   <a className="search-button">MLS SEARCH</a>
                 </Link>
-              </div>
+              </div> */}
             </div>
         </div>
       </div>

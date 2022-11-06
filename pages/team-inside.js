@@ -41,8 +41,8 @@ const TeamsInside = ({
 						</p>
 						<h3 className="meet-left-name">{meettheteam.attributes.memberName}</h3>
 						<p className="broker">{meettheteam.attributes.memberType}</p>
-						<a className="number" href="javascript:;">{meettheteam.attributes.contactNo}</a>
-						<a className="email" href="javascript:;">{meettheteam.attributes.memberEmail}</a>
+						<a className="number" href="#">{meettheteam.attributes.contactNo}</a>
+						<a className="email" href="#">{meettheteam.attributes.memberEmail}</a>
 					</div>
 					<div className="meet-right">
 						<p>{meettheteam.attributes.Content}</p>
@@ -69,10 +69,10 @@ const TeamsInside = ({
 					</div>
 				</div>
 				<div className="video-btn contact-btn">
-					<a href="javascript:;">CONTACT US</a>
+					<a href="#">CONTACT US</a>
 				</div>
 				<div className="find-hotel">
-					<a href="javascript:;">Find More about our Villa Hotels</a>
+					<a href="#">Find More about our Villa Hotels</a>
 				</div>
 			</div>
 		</div>
