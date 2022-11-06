@@ -1159,6 +1159,9 @@ h3.propertytxt {
   .inquiry a.desktop-inquiry-call {font-size: 14px;}
 
   .soon_title {margin: 150px 0px !important;font-size: 35px;line-height: 35px;}
+
+  .custom_model_content {width: 80%;}
+  .contact-form h2 {font-size: 45px;}
 }
 
 @media only screen and (max-width: 991px) {
@@ -1358,6 +1361,14 @@ h3.propertytxt {
 
   .video_item_wrap:before {font-size: 40px;}
   .soon_title {margin: 100px 0px !important;font-size: 24px;line-height: 24px;}
+
+  .custom_model_content {padding:30px;width: 70%;padding:25px;}
+  .contact-form h2 {padding-bottom: 10px;font-size: 30px;}
+  .contact-lebel {font-size: 16px;}
+  .contact-lebel::placeholder {font-size:14px;}
+  .submit_btn_wrap button {font-size:16px;}
+  .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {margin: 20px 0 0;padding: 10px;}
+  .model_close {right: 10px;top: 10px;font-size: 20px;color: #000;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1591,6 +1602,9 @@ h3.propertytxt {
   .video_item_wrap {height: 160px;}
   .videos_pg_wrap .buttons-wrap.video-wrapper .sold-btn a {padding:10px 20px;line-height: 1;font-size: 14px;font-weight: bold;letter-spacing: 1px;}
   .soon_title {font-size: 20px;line-height: 20px;}
+
+  .custom_model_content {width: 90%;}
+  .contact-lebel::placeholder {font-size:12px;}
 }
 
 @media only screen and (max-width: 430px) {
