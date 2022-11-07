@@ -957,6 +957,12 @@ h3.propertytxt {
 .dropdownMenu p a:hover {color: #dac172;}
 
 
+@media screen and (min-width: 1024px), screen and (max-height: 800px) {
+  .custom_model_content {padding: 25px 35px 35px;}
+  .contact-form h2 {font-size: 40px;padding-bottom: 10px;}
+  .final_msg_wrap .error_msg {padding: 15px;font-size: 16px;}
+}
+
 @media (min-width: 1860px){
   body .footer-img .featured-img {height: 340px !important;}
 }
@@ -1160,8 +1166,8 @@ h3.propertytxt {
 
   .soon_title {margin: 150px 0px !important;font-size: 35px;line-height: 35px;}
 
-  .custom_model_content {width: 80%;}
-  .contact-form h2 {font-size: 45px;}
+  .custom_model_content {width: 100%;}
+  .contact-form h2 {font-size: 40px;}
 }
 
 @media only screen and (max-width: 991px) {
@@ -1369,6 +1375,9 @@ h3.propertytxt {
   .submit_btn_wrap button {font-size:16px;}
   .final_msg_wrap .error_msg, .final_msg_wrap .thankyou_msg {margin: 20px 0 0;padding: 10px;}
   .model_close {right: 10px;top: 10px;font-size: 20px;color: #000;}
+
+  .contact-form-label {flex-wrap:wrap;}
+  .form-item {width:100%;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1605,6 +1614,8 @@ h3.propertytxt {
 
   .custom_model_content {width: 90%;}
   .contact-lebel::placeholder {font-size:12px;}
+  .contact-form h2 {padding-bottom: 5px;font-size: 26px;}
+  .error_msg {font-size: 12px;}
 }
 
 @media only screen and (max-width: 430px) {

@@ -205,7 +205,7 @@ const Home = ({
                           ) : ("")}
                         </li>
                       ))}
-                      <li className="nav-item cursor"><a className="nav-link ">Contact Us</a></li>
+                      <li className="nav-item cursor"><a className="nav-link"  onClick={onAddClick}>Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
