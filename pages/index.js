@@ -165,8 +165,8 @@ const Home = ({
             alt="Villazzo"
           /> */}
           <video loop muted autoPlay={"autoplay"}>
-              <source src="https://res.cloudinary.com/usability-designs/video/upload/v1667576311/desktop_d836aea168.mp4" type="video/mp4" />
-              <source src="https://res.cloudinary.com/usability-designs/video/upload/v1667576311/desktop_d836aea168.mp4" type="video/ogg" />
+              <source src={global.attributes.videoURL} type="video/mp4" />
+              <source src={global.attributes.videoURL} type="video/ogg" />
           </video>
         </div>
         <header className="header">
