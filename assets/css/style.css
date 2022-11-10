@@ -954,7 +954,7 @@ h3.propertytxt {
 /*Contact popup css end*/
 
 .soon_title {margin: 300px 0px !important;margin: 0px;font-size: 55px;line-height: 55px;text-transform: uppercase;color: #222222;font-weight: 300;font-family: "Gotham",sans-serif;text-align: center;}
-.dropdownMenu {display:none;position: absolute;top: 20px;width: 100%;background: #fff;z-index: 9;padding: 10px;border-radius: 0px 0px 10px 10px;box-shadow: 0px 8px 14px -8px #000;}
+.dropdownMenu {display:none;position: absolute;top: 20px;width: max-content;background: #fff;z-index: 9;padding: 10px;border-radius: 0px 0px 10px 10px;box-shadow: 0px 8px 14px -8px #000;}
 .visit-text-wrap:hover .dropdownMenu, .see-more-text-wrap:hover .dropdownMenu {display: block;}
 .dropdownMenu p {width: 100%;text-align: center;padding: 2px 0px;margin: 0px;font-weight: 200;letter-spacing: 0.4px;font-size: 14px;}
 .dropdownMenu p a {transition: 0.5s all;font-size: 14px;font-family: "Lato",ui-sans-serif;text-transform: uppercase;margin: 0px;font-weight: 200;letter-spacing: 0.4px;color: #000;text-decoration: none;}
