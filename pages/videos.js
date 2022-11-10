@@ -15,7 +15,7 @@ const Videos = ({
 }) => {
     let videosList = videospage.attributes.video
     let mainvideosList = []
-    videosList.forEach((element) => {
+    videosList.forEach((element, index) => {
       mainvideosList.push(element)
     })
     const myLoader = ({ src, width, quality }) => {
