@@ -205,10 +205,9 @@ const Header = ({ navigation, global }) => {
                       </a>
                     </p>
                     <div className="dropdownMenu">
-                    <p><a href="#">Site 1</a></p>
-                    <p><a href="#">Site 2</a></p>
-                    <p><a href="#">Site 3</a></p>
-                  </div>
+                      <p><a href="https://www.villazzo.com/">VILLAZZO HOTELS</a></p>
+                      <p><a href="http://www.global-luxury-villas.com/">GREAT VILLA DEALS</a></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -228,8 +227,8 @@ const Header = ({ navigation, global }) => {
                     </a>
                   </p>
                   <div className="dropdownMenu">
-                    <p><a href="tel:+1(305)7770146">+1(305)7770146</a></p>
-                    <p><a href="tel:+33(4)94493254">+33(4)94493254</a></p>
+                    <p><a href="mailto:Lisa.Blake@Villazzo.com">Lisa.Blake@Villazzo.com</a></p>
+                    <p><a href="tel:+1 (305) 340-2727">+1 (305) 340-2727</a></p>
                   </div>
                 </div>
               </div>

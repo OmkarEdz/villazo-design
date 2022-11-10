@@ -49,12 +49,7 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
           <div className="sell-search-container buy">
             <div className="selltxt">
               <h3 className="propertytxt">THE PERFECT HOME FOR YOU</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                pretium libero faucibus pharetra consequat. Aliquam cursus risus
-                in nunc venenatis mattis. Suspendisse arcu mi, dapibus quis
-                volutpat sit amet, ultricies non eros.
-              </p>
+              <p>Villazzo is here to help acquire your dream home or condo. We have helped many clients successfully secure their new residence in South Florida. Let us do the same for you.</p>
             </div>
             <div className="buy-search-box">
               <form onSubmit={handleSubmit}>

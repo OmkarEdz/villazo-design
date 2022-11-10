@@ -39,6 +39,7 @@ const Home = ({
       mainNavigation[menucount].submenu.push(element)
     }
   })
+
   const [toggleMenuClass, toggleMenu] = useState(false)
   const [subMenuClass, subMenuToggleMenu] = useState(false)
 
@@ -111,7 +112,15 @@ const Home = ({
 
   // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
-  // Stop the form from submitting and refreshing the page.
+    const res = await fetch(`api/contact`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(inputs),
+			})
+
+    // Stop the form from submitting and refreshing the page.
     event.preventDefault()
     
     let isValidForm = handleValidation();
@@ -126,7 +135,7 @@ const Home = ({
             phoneNo: phone,
             message: message,
           }
-        }
+        },
       );
       
       setShowSuccessMessage(true);
@@ -230,9 +239,8 @@ const Home = ({
                       </a>
                     </p>
                     <div className="dropdownMenu">
-                      <p><a href="#">Site 1</a></p>
-                      <p><a href="#">Site 2</a></p>
-                      <p><a href="#">Site 3</a></p>
+                      <p><a href="https://www.villazzo.com/">VILLAZZO HOTELS</a></p>
+                      <p><a href="http://www.global-luxury-villas.com/">GREAT VILLA DEALS</a></p>
                     </div>
                   </div>
                 </div>
@@ -253,14 +261,14 @@ const Home = ({
                     </a>
                   </p>
                   <div className="dropdownMenu">
-                    <p><a href="tel:+1(305)7770146">+1(305)7770146</a></p>
-                    <p><a href="tel:+33(4)94493254">+33(4)94493254</a></p>
+                    <p><a href="mailto:Lisa.Blake@Villazzo.com">Lisa.Blake@Villazzo.com</a></p>
+                    <p><a href="tel:+1 (305) 340-2727">+1 (305) 340-2727</a></p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="inqury-btn">
-              <a href="#" >INQUIRE</a>
+              <a href="javascript:;"  onClick={onAddClick}>INQUIRE</a>
             </div>
           </div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light hideOnMob">

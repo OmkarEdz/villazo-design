@@ -25,16 +25,24 @@ const Videos = ({
     const [showMore, setShowMore] = useState(false);
     const mdl = React.useRef(null);
     const mdlIframe = React.useRef(null);
+    const mdlLoader = React.useRef(null);
+    const mdlContent = React.useRef(null);
     const youtubeVideo = (e) => {
       mdl.current.classList.add("show_popup");
       e.target.classList.add("active");
       let param = e.target.getAttribute("data-url");
       mdlIframe.current.setAttribute("src",param);
+      setTimeout(() => {
+        mdlLoader.current.classList.add("hide_loader");
+        mdlContent.current.classList.add("show_Content");
+      }, 2500)
     }
     
     const onCloseClick = (e) => {
       mdl.current.classList.remove("show_popup");
       mdlIframe.current.setAttribute("src","");
+      mdlLoader.current.classList.remove("hide_loader");
+      mdlContent.current.classList.remove("show_Content");
     };
   return (
     <>
@@ -62,7 +70,8 @@ const Videos = ({
             </div>
             <div className="main_popup video-modal" ref={mdl}>
               <div className="custom_model">
-                <div className="custom_model_dialog">
+                <div class="loader" ref={mdlLoader}></div>
+                <div className="custom_model_dialog" ref={mdlContent}>
                   <a href="javascript:;" onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
                   <iframe ref={mdlIframe} id="popupIframe" src="" title="YouTube video player"></iframe>
                 </div>    

@@ -15,7 +15,7 @@ const ComingSoon = ({
       <div className="bg-img bg-white new_dev_pg_wrap coming_soon_wrap">
         <Header navigation={navigation} global={global} />
 		<div className="container">
-			<h1 className="soon_title">PAGE COMMING SOON..!</h1>
+			<h1 className="soon_title">PAGE COMING SOON!</h1>
 		</div>
       </div>
       <Footer footerProp={footerData} />
