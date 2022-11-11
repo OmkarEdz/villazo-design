@@ -18,6 +18,13 @@ const Videos = ({
     videosList.forEach((element, index) => {
       mainvideosList.push(element)
     })
+    
+    const moreBtn = React.useRef(null);
+    // moreBtn.current.classList.remove("show_BTN");
+    // if (videospage.attributes.video.length > 4) {
+    //   moreBtn.current.classList.add("show_BTN");
+    // }
+
     const myLoader = ({ src, width, quality }) => {
       return `${src}?w=${width}&q=${quality || 75}`
     }
@@ -62,11 +69,11 @@ const Videos = ({
                 <p className="video-content">{element.subheading}</p>
               </div>
               ))}
-            </div>
-            <div className="video-btn contact-btn sold-btn">
-              <a href="javascript:;" onClick={() => setShowMore(!showMore)}>
-                {showMore ? "Less" : "More"}
-              </a>
+              <div className="video-btn contact-btn sold-btn moreBtnHide" ref={moreBtn}>
+                <a href="javascript:;" onClick={() => setShowMore(!showMore)}>
+                  {showMore ? "Less" : "More"}
+                </a>
+              </div>
             </div>
             <div className="main_popup video-modal" ref={mdl}>
               <div className="custom_model">

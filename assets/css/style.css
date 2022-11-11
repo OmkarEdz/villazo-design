@@ -969,6 +969,9 @@ h3.propertytxt {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.moreBtnHide {display:none;}
+.moreBtnHide.show_BTN {display:flex;}
+.video-box:nth-child(5) + .video-btn {display: flex;}
 
 
 @media screen and (min-width: 1024px), screen and (max-height: 800px) {
