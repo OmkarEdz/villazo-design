@@ -875,8 +875,10 @@ h3.propertytxt {
 .slider-wrapper .slider-content p{font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;}
 .slider-wrapper .slick-next:before, .slider-wrapper .slick-prev:before{display: none;}
 .slider-wrapper .slick-next, .slider-wrapper .slick-prev{top: 45%;background-size: contain;}
-.slider-wrapper .slick-prev {left: -100px;background: url(https://res.cloudinary.com/usability-designs/image/upload/v1666085156/slider_arrow_5b6ed1a4eb.png?updated_at=2022-10-18T09:25:56.846Z) no-repeat center center / cover !important;width: 20px;height: 40px;}
-.slider-wrapper .slick-next{right: -100px;background: url(https://res.cloudinary.com/usability-designs/image/upload/v1666085156/slider_arrow_1_f5fff11ce5.png?updated_at=2022-10-18T09:25:56.228Z) no-repeat center center / cover !important;width: 20px;height: 40px;}
+.slider-wrapper .slick-prev {left: -100px;background: url(https://res.cloudinary.com/usability-designs/image/upload/v1668421143/left_arrow_7b9ed9b2ad.png?updated_at=2022-11-14T10:19:04.997Z) no-repeat center center / cover !important;width: 20px;height: 40px;}
+.slider-wrapper .slick-next{right: -100px;background: url(https://res.cloudinary.com/usability-designs/image/upload/v1668421143/right_arrow_4160f203bd.png?updated_at=2022-11-14T10:19:05.816Z) no-repeat center center / cover !important;width: 20px;height: 40px;}
+.slider-wrapper .slick-prev:hover {background: url(https://res.cloudinary.com/usability-designs/image/upload/v1668421143/left_arrow_hover_23cba25a65.png?updated_at=2022-11-14T10:19:04.088Z) no-repeat center center / cover !important;} 
+.slider-wrapper .slick-next:hover {background: url(https://res.cloudinary.com/usability-designs/image/upload/v1668421143/right_arrow_hover_c912135940.png?updated_at=2022-11-14T10:19:04.280Z) no-repeat center center / cover !important;} 
 .slider-wrapper .slick-dots li{margin: 0px 5px;width: auto;height: auto;border-radius: 50%;background-color: #f9e69f;}
 .slider-wrapper .slick-dots li button {width: 15px;height: 15px;}
 .slider-wrapper .slick-dots li button::before {display: none;}
