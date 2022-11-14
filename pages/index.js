@@ -1,14 +1,11 @@
 import React, { useState } from "react"
-// import Articles from "../components/articles";
-// import Layout from "../components/layout";
-// import Seo from "../components/seo";
-// import menuIcon from "../assets/images/villazzo-symbol.png"
 import Footer from "../components/footer"
 import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
 import axios from 'axios';
+// import NodeMailer from 'nodemailer';
 
 const Home = ({
   global,
@@ -46,6 +43,29 @@ const Home = ({
   const navRef = React.useRef(null);
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
+
+    // const transporter = nodemailer.createTransport({
+    //   host: "smtp.gmail.com",
+    //   auth: {
+    //     user: 'omkar.t@edreamz.in',
+    //     pass: 'sahil@2020'
+    //   }
+    // })
+
+    // const options = {
+    //   from: "omkar.t@edreamz.in",
+    //   to: "omkar.t@edreamz.in",
+    //   subject: `Contact form submission from`,
+    //   text: 'Dummy text'
+    // }
+
+    // transporter.sendMail(options, function (err, info) {
+    //   if(err){
+    //     console.log(err);
+    //     return;
+    //   }
+    //   console.log("Sent: " + info.response);
+    // })
   };
 
   const onRemoveClick = (e) => {
@@ -112,14 +132,6 @@ const Home = ({
 
   // Handles the submit event on form submit.
   const handleSubmit = async (event) => {
-    const res = await fetch(`api/contact`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(inputs),
-			})
-
     // Stop the form from submitting and refreshing the page.
     event.preventDefault()
     
