@@ -850,7 +850,7 @@ h3.propertytxt {
 .img_Wrap {margin-bottom: 30px;}
 .pro-name{font-size: 28px;letter-spacing: 1px;line-height: 40px;text-transform: uppercase;color: #222222;font-weight: 700;font-family: "Lato",ui-sans-serif;text-align: center;}
 .pro-text {font-size: 22px;letter-spacing: 1px;line-height: 32px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: center;margin-bottom: 0;}
-.property-box img{width: 100% !important;filter: brightness(0.5);}
+.property-box img{width: 100% !important;height: 340px !important;object-fit: cover;}
 .properties{width: 100%;}
 .contact-btn{width: 100%;display: flex;justify-content: center;}
 .contact-btn a{margin-bottom: 45px;border: 1px solid #f8de7f;padding: 10px;font-size: 20px;letter-spacing: 1px;line-height: 30px;text-transform: uppercase;color: #f7f5f4;font-weight: 500;font-family: "Lato",ui-sans-serif;text-align: center;width: 234px;height: 52px;}
