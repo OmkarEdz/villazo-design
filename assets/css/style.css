@@ -1647,6 +1647,8 @@ h3.propertytxt {
 
   .video-modal .custom_model_dialog iframe {width: 100%;height: 200px;}
   .video_item_wrap .youtubeIcon {font-size: 45px;}
+
+  .property-box img {height: 200px !important;}
 }
 
 @media only screen and (max-width: 430px) {

@@ -164,7 +164,7 @@ const NewDevelopment = ({
 							/>
 						</p>
 						<h4 className="pro-name">{element.heading}</h4>
-						<p className="pro-text">{element.subheading}</p>
+            <div className="pro-text" dangerouslySetInnerHTML={{ __html: element.subheading }}></div>
 					</div>
 					))}
 				</div>
