@@ -5,7 +5,7 @@ import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
 import axios from 'axios'
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 
 const Home = ({
   global,
@@ -119,30 +119,6 @@ const Home = ({
     //   }
     //   console.log('Message sent: %s', info.messageId);
     // });
-
-    const nodemailer = require('nodemailer');
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'omkar.t@edreamz.in',
-        pass: 'sahil@2020' // naturally, replace both with your real credentials or an application-specific password
-      }
-    });
-
-    const mailOptions = {
-      from: 'omkar.t@edreamz.in',
-      to: 'omkar.t@edreamz.in',
-      subject: 'Invoices due',
-      text: 'Dudes, we really need your money.'
-    };
-
-    transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-      console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });
   };
 
   const onRemoveClick = (e) => {
