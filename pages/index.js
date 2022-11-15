@@ -4,8 +4,8 @@ import { fetchAPI } from "../lib/api"
 import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
-import axios from 'axios';
-// import NodeMailer from 'nodemailer';
+import axios from 'axios'
+import nodemailer from "nodemailer";
 
 const Home = ({
   global,
@@ -44,33 +44,7 @@ const Home = ({
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
 
-    var nodemailer = require('nodemailer');
-    var smtpTransport = require('nodemailer-smtp-transport');
-
-    var transporter = nodemailer.createTransport(smtpTransport({
-      service: 'gmail',
-      host: 'smtp.gmail.com',
-      auth: {
-        user: 'omkar.t@edreamz.in',
-        pass: 'sahil@2020'
-      }
-    }));
-
-    var mailOptions = {
-      from: 'omkar.t@edreamz.in',
-      to: 'omkar.t@edreamz.in',
-      subject: 'Sending Email using Node.js[nodemailer]',
-      text: 'That was easy!'
-    };
-
-    transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });  
-
+    // const nodemailer = require('nodemailer');
     // const transporter = nodemailer.createTransport({
     //   host: "smtp.gmail.com",
     //   auth: {
@@ -79,12 +53,12 @@ const Home = ({
     //   }
     // })
 
-    // const options = {
+    // transporter.sendMail({
     //   from: "omkar.t@edreamz.in",
     //   to: "omkar.t@edreamz.in",
     //   subject: `Contact form submission from`,
     //   text: 'Dummy text'
-    // }
+    // });
 
     // transporter.sendMail(options, function (err, info) {
     //   if(err){
@@ -92,7 +66,83 @@ const Home = ({
     //     return;
     //   }
     //   console.log("Sent: " + info.response);
-    // })
+    // });
+
+    // const nodemailer = require("nodemailer");
+    // // async..await is not allowed in global scope, must use a wrapper
+    // async function main() {
+    //   // Generate test SMTP service account from ethereal.email
+    //   // Only needed if you don't have a real mail account for testing
+    //   let testAccount = await nodemailer.createTestAccount();
+
+    //   // create reusable transporter object using the default SMTP transport
+    //   let transporter = nodemailer.createTransport({
+    //     host: "smtp.ethereal.email",
+    //     port: 587,
+    //     secure: false, // true for 465, false for other ports
+    //     auth: {
+    //       user: 'omkar.t@edreamz.in', // generated ethereal user
+    //       pass: 'sahil@2020' // generated ethereal password
+    //     },
+    //   });
+
+    //   // send mail with defined transport object
+    //   let info = await transporter.sendMail({
+    //     from: 'omkar.t@edreamz.in', // sender address
+    //     to: "omkar.t@edreamz.in", // list of receivers
+    //     subject: "Hello", // Subject line
+    //     text: "Hello world?", // plain text body
+    //     html: "<b>Hello world?</b>", // html body
+    //   });
+    // }
+
+
+    // const transporter = nodemailer.createTransport({
+    //   port: 25, // Postfix uses port 25
+    //   host: 'localhost',
+    //   tls: {
+    //     rejectUnauthorized: false
+    //   },
+    // });
+
+    // var message = {
+    //   from: 'omkar.t@edreamz.in',
+    //   to: 'omkar.t@edreamz.in',
+    //   subject: 'Confirm Email',
+    //   text: 'Please confirm your email',
+    //   html: '<p>Please confirm your email</p>'
+    // };
+
+    // transporter.sendMail(message, (error, info) => {
+    //   if (error) {
+    //       return console.log(error);
+    //   }
+    //   console.log('Message sent: %s', info.messageId);
+    // });
+
+    const nodemailer = require('nodemailer');
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'omkar.t@edreamz.in',
+        pass: 'sahil@2020' // naturally, replace both with your real credentials or an application-specific password
+      }
+    });
+
+    const mailOptions = {
+      from: 'omkar.t@edreamz.in',
+      to: 'omkar.t@edreamz.in',
+      subject: 'Invoices due',
+      text: 'Dudes, we really need your money.'
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+      if (error) {
+      console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
   };
 
   const onRemoveClick = (e) => {
