@@ -1425,7 +1425,8 @@ h3.propertytxt {
 
 @media only screen and (max-width: 580px) {
   .header {
-    padding: 0px
+    padding: 0px;
+    z-index:9;
   }
   .main-wrap {
     background-color:#fff;

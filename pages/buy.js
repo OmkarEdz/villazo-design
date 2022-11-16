@@ -35,13 +35,17 @@ const Buy = ({ global, homepage, footerData, navigation }) => {
     <>
       <div className="bg-img">
         <div className="homepage-image">
-          <Image
+          {/* <Image
             loader={myLoader}
             src={getStrapiMedia(homepage.attributes.headerImage)}
             className="header_image"
             layout="fill"
             alt="Villazzo"
-          />
+          /> */}
+          <video loop muted autoPlay={"autoplay"}>
+              <source src={global.attributes.videoURL} type="video/mp4" />
+              <source src={global.attributes.videoURL} type="video/ogg" />
+          </video>
         </div>
         <Header navigation={navigation} global={global} />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
