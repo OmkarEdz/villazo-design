@@ -1428,6 +1428,7 @@ h3.propertytxt {
     padding: 0px;
     z-index:9;
   }
+  .homepage-image {pointer-events:none;}
   .main-wrap {
     background-color:#fff;
     flex-wrap: wrap;
