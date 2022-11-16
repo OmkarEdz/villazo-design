@@ -154,6 +154,7 @@ const Sell = ({
             layout="fill"
             alt="Villazzo"
           /> */}
+          <div className="blankDiv"></div>
           <video loop muted autoPlay={"autoplay"}>
               <source src={global.attributes.videoURL} type="video/mp4" />
               <source src={global.attributes.videoURL} type="video/ogg" />
