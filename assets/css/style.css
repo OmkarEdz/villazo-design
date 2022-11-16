@@ -829,7 +829,7 @@ h3.propertytxt {
 .meet-left{width: 34%;text-align: center;order: 3;margin: 30px 0px;}
 .meet-left.main-team {width: 32%;text-align: center;order: 3;margin: 30px 0px;}
 .meet-left:first-child {order:1;}
-.meet-right{width: 66%;}
+.meet-right{width: 66%;padding-right: 20px;}
 .meet-right p {letter-spacing: 1px;line-height: 35px;color: #222222;font-weight: 400;font-family: "Lato",ui-sans-serif;text-align: justify;font-size: 22px;}
 .meet-left .meet-left-img{border-radius: 50%;overflow: auto;padding: 0px 35px;width: auto;margin:0px auto 30px;}
 .meet-left:first-child .meet-left-img {margin:0px auto 45px;}
@@ -1163,6 +1163,8 @@ h3.propertytxt {
   .video_item_wrap, .video_item_wrap .youtubeIcon {height: 200px;}
   .video-name {font-size: 20px;line-height: 26px;}
   .video-content {font-size: 16px;line-height: 20px;}
+
+  .property-box img {height: 240px !important;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1196,6 +1198,8 @@ h3.propertytxt {
 
   .video-modal .custom_model_dialog a {font-size: 24px;}
   .video-modal .custom_model_dialog iframe {width: 500px;height: 300px;}
+
+  .property-box img {height: 220px !important;}
 }
 
 @media only screen and (max-width: 991px) {
@@ -1390,7 +1394,7 @@ h3.propertytxt {
   .inside-wrap .meet-wrap {flex-direction: column;margin: 0;}
   .bg-white .inside-wrap .meet-left {width: 100%;padding-right: 0px;margin: 0px;}
   .inside-wrap .meet-left .meet-left-img span {width: 140px !important;height: 140px !important;} 
-  .meet-right {width: 100%;padding-top: 30px;}
+  .meet-right {width: 100%;padding-top: 30px;padding-right: 0px;}
   .meet-right p {text-align: justify;}
 
   .video_item_wrap:before {font-size: 40px;}
@@ -1406,6 +1410,8 @@ h3.propertytxt {
 
   .contact-form-label {flex-wrap:wrap;}
   .form-item {width:100%;}
+
+  .property-box img {height: 250px !important;}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1648,7 +1654,7 @@ h3.propertytxt {
   .video-modal .custom_model_dialog iframe {width: 100%;height: 200px;}
   .video_item_wrap .youtubeIcon {font-size: 45px;}
 
-  .property-box img {height: 200px !important;}
+  .property-box img {height: 180px !important;}
 }
 
 @media only screen and (max-width: 430px) {

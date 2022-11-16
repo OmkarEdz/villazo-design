@@ -6,6 +6,7 @@ import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
 import axios from 'axios'
 // import nodemailer from "nodemailer";
+// import fs from 'fs';
 
 const Home = ({
   global,
@@ -46,7 +47,7 @@ const Home = ({
 
     // const nodemailer = require('nodemailer');
     // const transporter = nodemailer.createTransport({
-    //   host: "smtp.gmail.com",
+    //   service: "smtp.gmail.com",
     //   auth: {
     //     user: 'omkar.t@edreamz.in',
     //     pass: 'sahil@2020'

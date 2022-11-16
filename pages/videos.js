@@ -80,7 +80,7 @@ const Videos = ({
                 <div className="loader" ref={mdlLoader}></div>
                 <div className="custom_model_dialog" ref={mdlContent}>
                   <a href="javascript:;" onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
-                  <iframe ref={mdlIframe} id="popupIframe" src="" title="YouTube video player"></iframe>
+                  <iframe ref={mdlIframe} id="popupIframe" src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
                 </div>    
               </div>
             </div>

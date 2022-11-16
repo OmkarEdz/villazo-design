@@ -25,10 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/emily-gonzalez": [
+    "/lisa-blake": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/emily-gonzalez.js"
+      "static/chunks/pages/lisa-blake.js"
+    ],
+    "/videos": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/videos.js"
     ]
   },
   "ampFirstPages": []
