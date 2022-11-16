@@ -1661,6 +1661,7 @@ h3.propertytxt {
   .sell-search-container.buy {margin-bottom: 50px;}
   .sell-search-box .contact-btn a {padding:10px;}
   .footer-sec1 .toll-wrap p:nth-last-child(2) br ~ br {display:none;}
+  .buttons-wrap {position:relative;z-index:9;}
 }
 
 @media only screen and (max-width: 430px) {
