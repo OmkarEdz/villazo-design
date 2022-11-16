@@ -7,6 +7,7 @@ import Link from 'next/link'
 import axios from 'axios'
 // import nodemailer from "nodemailer";
 // import fs from 'fs';
+// import { Mailer } from 'nodemailer-react'
 
 const Home = ({
   global,
@@ -44,7 +45,29 @@ const Home = ({
   const navRef = React.useRef(null);
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
-
+    
+    // const transport = {
+    //   host: 'smtp.gmail.com',
+    //   secure: true,
+    //   auth: { user: 'omkar.t@edreamz.in', pass: 'sahil@2020' },
+    // }
+    // const defaults = {
+    //   from: 'omkar.t@edreamz.in',
+    // }
+    // const WelcomeEmail = (e) => ({
+    //   subject: `Hello`,
+    //   body: (
+    //     <div>
+    //       <p>Hello</p>
+    //     </div>
+    //   )
+    // })
+    // const mailer = Mailer(
+    //   { transport, defaults },
+    //   { WelcomeEmail }
+    // )
+    // return false;
+    
     // const nodemailer = require('nodemailer');
     // const transporter = nodemailer.createTransport({
     //   service: "smtp.gmail.com",

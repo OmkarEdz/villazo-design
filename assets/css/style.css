@@ -1165,6 +1165,7 @@ h3.propertytxt {
   .video-content {font-size: 16px;line-height: 20px;}
 
   .property-box img {height: 240px !important;}
+  .sell-search-box .contact-btn a {padding: 12px 40px;line-height: 14px;font-size: 14px;width: unset;height: unset;}
 }
 
 @media only screen and (max-width: 1024px) {
@@ -1655,6 +1656,9 @@ h3.propertytxt {
   .video_item_wrap .youtubeIcon {font-size: 45px;}
 
   .property-box img {height: 180px !important;}
+  .sell-search-container.buy {margin-bottom: 50px;}
+  .sell-search-box .contact-btn a {padding:10px;}
+  .footer-sec1 .toll-wrap p:nth-last-child(2) br ~ br {display:none;}
 }
 
 @media only screen and (max-width: 430px) {

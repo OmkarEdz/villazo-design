@@ -17,7 +17,9 @@ module.exports = nextConfig
 //             config.resolve.fallback = {
 //                 fs: false,
 //                 net: false,
-//                 dns: false
+//                 dns: false,
+//                 child_process: false,
+//                 tls: false
 //             }
 //         }
 //         nextConfig

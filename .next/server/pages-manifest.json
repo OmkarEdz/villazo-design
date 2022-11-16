@@ -2,6 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/lisa-blake": "pages/lisa-blake.js",
-  "/videos": "pages/videos.js"
+  "/sell": "pages/sell.js",
+  "/new-development": "pages/new-development.js",
+  "/": "pages/index.js"
 }
