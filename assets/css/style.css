@@ -1692,3 +1692,10 @@ h3.propertytxt {
   .footer-sec1 .toll-wrap p strong {margin-bottom: 5px;}
   .footer-sec1 .toll-wrap p a {font-size: 10px;}
 }
+
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+  @media only screen and (max-width: 580px) {
+    .homepage-image video {position: absolute;left: 0;top: 0;}
+  }
+}
