@@ -5,9 +5,6 @@ import Image from "next/image"
 import { getStrapiMedia } from "../lib/media"
 import Link from 'next/link'
 import axios from 'axios'
-// import nodemailer from "nodemailer";
-// import fs from 'fs';
-// import { Mailer } from 'nodemailer-react'
 
 const Home = ({
   global,
@@ -45,104 +42,6 @@ const Home = ({
   const navRef = React.useRef(null);
   const onAddClick = (e) => {
     navRef.current.classList.add("show_popup");
-    
-    // const transport = {
-    //   host: 'smtp.gmail.com',
-    //   secure: true,
-    //   auth: { user: 'omkar.t@edreamz.in', pass: 'sahil@2020' },
-    // }
-    // const defaults = {
-    //   from: 'omkar.t@edreamz.in',
-    // }
-    // const WelcomeEmail = (e) => ({
-    //   subject: `Hello`,
-    //   body: (
-    //     <div>
-    //       <p>Hello</p>
-    //     </div>
-    //   )
-    // })
-    // const mailer = Mailer(
-    //   { transport, defaults },
-    //   { WelcomeEmail }
-    // )
-    // return false;
-    
-    // const nodemailer = require('nodemailer');
-    // const transporter = nodemailer.createTransport({
-    //   service: "smtp.gmail.com",
-    //   auth: {
-    //     user: 'omkar.t@edreamz.in',
-    //     pass: 'sahil@2020'
-    //   }
-    // })
-
-    // transporter.sendMail({
-    //   from: "omkar.t@edreamz.in",
-    //   to: "omkar.t@edreamz.in",
-    //   subject: `Contact form submission from`,
-    //   text: 'Dummy text'
-    // });
-
-    // transporter.sendMail(options, function (err, info) {
-    //   if(err){
-    //     console.log(err);
-    //     return;
-    //   }
-    //   console.log("Sent: " + info.response);
-    // });
-
-    // const nodemailer = require("nodemailer");
-    // // async..await is not allowed in global scope, must use a wrapper
-    // async function main() {
-    //   // Generate test SMTP service account from ethereal.email
-    //   // Only needed if you don't have a real mail account for testing
-    //   let testAccount = await nodemailer.createTestAccount();
-
-    //   // create reusable transporter object using the default SMTP transport
-    //   let transporter = nodemailer.createTransport({
-    //     host: "smtp.ethereal.email",
-    //     port: 587,
-    //     secure: false, // true for 465, false for other ports
-    //     auth: {
-    //       user: 'omkar.t@edreamz.in', // generated ethereal user
-    //       pass: 'sahil@2020' // generated ethereal password
-    //     },
-    //   });
-
-    //   // send mail with defined transport object
-    //   let info = await transporter.sendMail({
-    //     from: 'omkar.t@edreamz.in', // sender address
-    //     to: "omkar.t@edreamz.in", // list of receivers
-    //     subject: "Hello", // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: "<b>Hello world?</b>", // html body
-    //   });
-    // }
-
-
-    // const transporter = nodemailer.createTransport({
-    //   port: 25, // Postfix uses port 25
-    //   host: 'localhost',
-    //   tls: {
-    //     rejectUnauthorized: false
-    //   },
-    // });
-
-    // var message = {
-    //   from: 'omkar.t@edreamz.in',
-    //   to: 'omkar.t@edreamz.in',
-    //   subject: 'Confirm Email',
-    //   text: 'Please confirm your email',
-    //   html: '<p>Please confirm your email</p>'
-    // };
-
-    // transporter.sendMail(message, (error, info) => {
-    //   if (error) {
-    //       return console.log(error);
-    //   }
-    //   console.log('Message sent: %s', info.messageId);
-    // });
   };
 
   const onRemoveClick = (e) => {
@@ -227,6 +126,27 @@ const Home = ({
         },
       );
       
+        const qs = require('qs');
+        axios.post('https://webdevfolio.com/Villazzomail/Villazzomail.php',  qs.stringify({
+            'pass': 'passs',
+            'action': 'myaction',
+            "data": {
+              firstName: fullname,
+              lastName: lastName,
+              email: email,
+              phoneNo: phone,
+              message: message,
+            }
+        }))
+        .then((res) => {
+          console.log(`statusCode: ${res.statusCode}`)
+          console.log(res)
+          console.log(`statusCode: ${res.data}`)
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+      
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
       // Reset form fields
@@ -265,7 +185,6 @@ const Home = ({
           <div className="blankDiv"></div>
           <video loop muted autoPlay={"autoplay"}>
               <source src={global.attributes.videoURL} type="video/mp4" />
-              <source src={global.attributes.videoURL} type="video/ogg" />
           </video>
         </div>
         <header className="header">
