@@ -183,8 +183,9 @@ const Home = ({
             alt="Villazzo"
           /> */}
           <div className="blankDiv"></div>
-          <video loop muted autoPlay={"autoplay"} controls={"false"}>
+          <video loop muted autoPlay={"autoplay"} playsinline>
               <source src={global.attributes.videoURL} type="video/mp4" />
+              <source src={global.attributes.videoURL} type="video/webm" />
           </video>
         </div>
         <header className="header">
