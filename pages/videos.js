@@ -38,6 +38,7 @@ const Videos = ({
       mdl.current.classList.add("show_popup");
       e.target.classList.add("active");
       let param = e.target.getAttribute("data-url");
+      console.log(param);
       mdlIframe.current.setAttribute("src",param);
       setTimeout(() => {
         mdlLoader.current.classList.add("hide_loader");
