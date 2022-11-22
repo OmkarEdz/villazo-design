@@ -128,15 +128,6 @@ const Home = ({
       
         const qs = require('qs');
         axios.post('https://webdevfolio.com/Villazzomail/Villazzomail.php',  qs.stringify({
-            // 'pass': 'passs',
-            // 'action': 'myaction',
-            // "data": {
-            //   firstName: fullname,
-            //   lastName: lastName,
-            //   email: email,
-            //   phoneNo: phone,
-            //   message: message,
-            // }
             "firstName": fullname,
             "lastName": lastName,
             "email": email,
