@@ -968,9 +968,9 @@ h3.propertytxt {
 
 /* loader css */
 .loader {border: 10px solid #fff; /* Light grey */border-top: 10px solid #f8de7f; /* Blue */border-radius: 50%;width: 80px;height: 80px;animation: spin 2s linear infinite;}
-.video-modal.show_popup .loader.hide_loader {display:none;}
-.video-modal.show_popup .custom_model_dialog {display: none;}
-.video-modal.show_popup .custom_model_dialog.show_Content {display: flex;}
+.show_popup .video-modal .loader.hide_loader {display:none;}
+.show_popup .video-modal .custom_model_dialog {display: none;}
+.show_popup .video-modal .custom_model_dialog.show_Content {display: flex;}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
