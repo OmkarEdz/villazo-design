@@ -31,18 +31,26 @@ const Videos = ({
 
     const [showMore, setShowMore] = useState(false);
     const mdl = React.useRef(null);
-    
+    const mdlIframe = React.useRef(null);
     const mdlLoader = React.useRef(null);
     const mdlContent = React.useRef(null);
     const youtubeVideo = (e) => {
+      mdl.current.classList.add("show_popup");
       e.target.classList.add("active");
-      e.target.parentNode.parentNode.classList.add("show_popup");
-      const element = document.querySelector(".show_popup");
+      let param = e.target.parentNode.getAttribute("data-url");
+      console.log(param);
+      mdlIframe.current.setAttribute("src",param);
+      setTimeout(() => {
+        mdlLoader.current.classList.add("hide_loader");
+        mdlContent.current.classList.add("show_Content");
+      }, 2500)
     }
     
     const onCloseClick = (e) => {
-      e.target.parentNode.parentNode.parentNode.parentNode.parentNode.classList.remove("show_popup");
-      e.target.parentNode.parentNode.parentNode.parentNode.classList.add("abc");
+      mdl.current.classList.remove("show_popup");
+      mdlIframe.current.setAttribute("src","");
+      mdlLoader.current.classList.remove("hide_loader");
+      mdlContent.current.classList.remove("show_Content");
     };
   return (
     <>
@@ -52,29 +60,29 @@ const Videos = ({
           <div className="buttons-wrap video-wrapper">
             <h1 className="video-heading">VIDEOS</h1>
             <div className={`video-wrap ${showMore ? "show-all" : ""}`}>
-              {mainvideosList.map((element, index) => (
-              <div key={`video${index}`} className="video-box" ref={mdl}>
-                <div className="video_item_wrap">
+              {mainvideosList.map((element) => (
+              <div key={mainvideosList.key} className="video-box">
+                <div className="video_item_wrap" data-url={element.youtubeEmebedURL}>
                   <iframe src={element.youtubeEmebedURL} title="YouTube video player"></iframe>
-                  <a href="javascript:;" className="youtubeIcon" onClick={youtubeVideo} data-url={element.youtubeEmebedURL}><i className="fa-brands fa-youtube"></i></a>
+                  <a href="javascript:;" className="youtubeIcon" onClick={youtubeVideo}></a>
                 </div>
                 <h2 className="video-name">{element.heading}</h2>
                 <p className="video-content">{element.subheading}</p>
-                <div className="main_popup video-modal">
-                  <div className="custom_model">
-                    <div className="loader hide_loader" ref={mdlLoader}></div>
-                    <div className="custom_model_dialog show_Content" ref={mdlContent}>
-                      <a href="javascript:;" onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
-                      <iframe id="popupIframe" src={element.youtubeEmebedURL} title="YouTube video player"></iframe>
-                    </div>    
-                  </div>
-                </div>
               </div>
               ))}
               <div className="video-btn contact-btn sold-btn moreBtnHide" ref={moreBtn}>
                 <a href="javascript:;" onClick={() => setShowMore(!showMore)}>
                   {showMore ? "Less" : "More"}
                 </a>
+              </div>
+            </div>
+            <div className="main_popup video-modal" ref={mdl}>
+              <div className="custom_model">
+                <div className="loader" ref={mdlLoader}></div>
+                <div className="custom_model_dialog" ref={mdlContent}>
+                  <a href="javascript:;" onClick={onCloseClick}><i className="fa-solid fa-xmark"></i></a>
+                  <iframe ref={mdlIframe} id="popupIframe" src="https://www.youtube.com/embed/fx3kvqPuTB4" title="YouTube video player"></iframe>
+                </div>    
               </div>
             </div>
           </div>	
