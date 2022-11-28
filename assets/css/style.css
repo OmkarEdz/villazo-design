@@ -172,13 +172,6 @@ img {
   height: 100% !important;
   object-fit: cover !important;
 }
-.homepage-image video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 .bg-img {
   min-height: 1057px;
   /* background:url('../images/video/desktop.mp4'); */
@@ -407,10 +400,6 @@ img {
     width: 54%;
     margin: 355px auto auto;
     flex-wrap: wrap;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 99;
 }
 /*.sell-btn {
   width: 25%;
