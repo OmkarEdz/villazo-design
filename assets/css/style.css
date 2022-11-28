@@ -172,6 +172,12 @@ img {
   height: 100% !important;
   object-fit: cover !important;
 }
+.homepage-image video {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .bg-img {
   min-height: 1057px;
   /* background:url('../images/video/desktop.mp4'); */
