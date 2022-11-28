@@ -407,6 +407,10 @@ img {
     width: 54%;
     margin: 355px auto auto;
     flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }
 /*.sell-btn {
   width: 25%;
